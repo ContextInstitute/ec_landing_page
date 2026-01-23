@@ -1,0 +1,5 @@
+The Bright Future program was developed by Dr. Robert Gilman. Trained as an astrophysicist, Robert decided in the mid-1970s that “the stars could wait, but the planet couldn’t.” He then turned his attention to the study of global sustainability, futures research, and strategies for positive cultural change.
+
+His on-the-ground sustainability efforts have included co-founding the Context Institute, creating and editing the award-winning In Context, A Quarterly of Humane Sustainable Culture, co-founding the Global Ecovillage Network, doing Citizen Diplomacy with the former USSR, serving as a City Councilman in Langley, Washington, and working with the American Institute of Architects on issues regarding sustainability and the built environment.
+
+You’ll be working with Robert and other team members during the course and in the Bright Future Network.
