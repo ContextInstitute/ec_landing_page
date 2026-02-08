@@ -8,10 +8,13 @@
     <!-- Tailwind (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Fonts: Headings (Sans) + Body (Serif) -->
+    <!-- Fonts: Headings (Serif) + Body (Sans) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
@@ -43,11 +46,11 @@
       }
 
       body {
-        font-family: "Lora", serif;
+        font-family: "Nunito Sans", sans-serif; /* Body is Sans */
         background: var(--color-bg);
         color: var(--color-ink);
-        font-size: 1.125rem;
-        line-height: 1.85;
+        font-size: 1.125rem; /* 18px base */
+        line-height: 1.6;
       }
 
       h1,
@@ -57,8 +60,7 @@
       h5,
       h6,
       .font-heading {
-        font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans",
-          sans-serif;
+        font-family: "Lora", serif; /* Headings are Serif */
         line-height: 1.2;
         letter-spacing: -0.01em;
       }
@@ -105,6 +107,20 @@
         padding: 1rem;
         gap: 1rem;
       }
+
+      /* Typography Utilities for Live Example */
+      .prose-example p {
+        margin-bottom: 1.5em;
+        max-width: 65ch;
+      }
+      .prose-example ul {
+        margin-bottom: 1.5em;
+        padding-left: 1.5em;
+        list-style-type: disc;
+      }
+      .prose-example li {
+        margin-bottom: 0.5em;
+      }
     </style>
 
     <script>
@@ -132,8 +148,8 @@
               "earth-deep": "#B85F45",
             },
             fontFamily: {
-              heading: ["Inter", "system-ui", "sans-serif"],
-              body: ["Lora", "serif"],
+              heading: ["Lora", "serif"],
+              body: ["Nunito Sans", "sans-serif"],
             },
             boxShadow: {
               soft: "0 12px 30px rgba(31, 41, 55, 0.08)",
@@ -144,7 +160,7 @@
     </script>
   </head>
 
-  <body class="bg-bg antialiased">
+  <body class="bg-bg antialiased text-ink">
     <!-- Mobile header (sidebar replacement) -->
     <header class="lg:hidden sticky top-0 z-40 bg-bg/90 backdrop-blur border-b border-border">
       <div class="mx-auto max-w-4xl px-5 py-4 flex items-center justify-between">
@@ -152,7 +168,7 @@
           <img src="cilogoL.svg" alt="Context Institute" class="h-8 w-auto max-w-[140px]" />
           <div class="leading-tight">
             <p class="font-heading font-semibold text-ink">Essential Capacities</p>
-            <p class="text-sm text-ink/60">Design System</p>
+            <p class="text-sm text-ink/60 font-body">Design System</p>
           </div>
         </div>
         <a href="#navigation" class="text-sm font-heading font-semibold text-primary underline underline-offset-4">Nav</a>
@@ -171,29 +187,29 @@
         </div>
         <div>
           <h2 class="font-heading text-xl font-bold text-ink">Essential Capacities</h2>
-          <p class="text-sm text-ink/60">Visual Source of Truth</p>
+          <p class="text-sm text-ink/60 font-body">Visual Source of Truth</p>
         </div>
       </div>
 
       <nav class="mt-10" aria-label="Design system navigation">
-        <ul class="space-y-3 text-[0.95rem]">
-          <li><a href="#introduction" class="font-heading font-semibold text-ink hover:text-primary transition-colors">Introduction</a></li>
-          <li><a href="#principles" class="font-heading font-semibold text-ink hover:text-primary transition-colors">Design Principles</a></li>
-          <li><a href="#brand-essence" class="font-heading font-semibold text-ink hover:text-primary transition-colors">Brand Essence</a></li>
-          <li><a href="#colors" class="font-heading font-semibold text-ink hover:text-primary transition-colors">Color Palette</a></li>
-          <li><a href="#typography" class="font-heading font-semibold text-ink hover:text-primary transition-colors">Typography & Formatting</a></li>
-          <li><a href="#assets" class="font-heading font-semibold text-ink hover:text-primary transition-colors">Visual Assets & Imagery</a></li>
-          <li><a href="#buttons" class="font-heading font-semibold text-ink hover:text-primary transition-colors">Buttons & CTAs</a></li>
-          <li><a href="#forms" class="font-heading font-semibold text-ink hover:text-primary transition-colors">Form Elements</a></li>
-          <li><a href="#components" class="font-heading font-semibold text-ink hover:text-primary transition-colors">Interactive Components</a></li>
-          <li><a href="#navigation" class="font-heading font-semibold text-ink hover:text-primary transition-colors">Navigation Examples</a></li>
-          <li><a href="#applications" class="font-heading font-semibold text-ink hover:text-primary transition-colors">Applications</a></li>
+        <ul class="space-y-3 text-[0.95rem] font-body">
+          <li><a href="#introduction" class="font-semibold text-ink hover:text-primary transition-colors">Introduction</a></li>
+          <li><a href="#principles" class="font-semibold text-ink hover:text-primary transition-colors">Design Principles</a></li>
+          <li><a href="#brand-essence" class="font-semibold text-ink hover:text-primary transition-colors">Brand Essence</a></li>
+          <li><a href="#typography" class="font-semibold text-ink hover:text-primary transition-colors">Typography & Formatting</a></li>
+          <li><a href="#colors" class="font-semibold text-ink hover:text-primary transition-colors">Color Palette</a></li>
+          <li><a href="#spacing" class="font-semibold text-ink hover:text-primary transition-colors">Spacing System</a></li>
+          <li><a href="#assets" class="font-semibold text-ink hover:text-primary transition-colors">Visual Assets & Imagery</a></li>
+          <li><a href="#buttons" class="font-semibold text-ink hover:text-primary transition-colors">Buttons & CTAs</a></li>
+          <li><a href="#forms" class="font-semibold text-ink hover:text-primary transition-colors">Form Elements</a></li>
+          <li><a href="#components" class="font-semibold text-ink hover:text-primary transition-colors">Interactive Components</a></li>
+          <li><a href="#navigation" class="font-semibold text-ink hover:text-primary transition-colors">Navigation Examples</a></li>
         </ul>
       </nav>
 
       <div class="mt-10 p-4 rounded-2xl bg-safe-soft border border-border">
         <p class="font-heading text-sm font-semibold text-ink">North Star</p>
-        <p class="mt-1 text-sm text-ink/75">“Grounded Clarity” — a deep, calm breath; a clear, sunlit path through complexity.</p>
+        <p class="mt-1 text-sm text-ink/75 font-body">“Grounded Clarity” — a deep, calm breath; a clear, sunlit path through complexity.</p>
       </div>
     </aside>
 
@@ -204,13 +220,13 @@
         <header id="introduction" class="mb-16">
           <p class="font-heading text-sm tracking-wide text-ink/60 uppercase">Essential Capacities • Visual Design System</p>
           <h1 class="mt-3 text-5xl md:text-6xl font-heading font-bold text-ink">Source of Truth</h1>
-          <p class="mt-5 text-xl md:text-2xl text-ink/80">
+          <p class="mt-5 text-xl md:text-2xl text-ink/80 font-body leading-relaxed">
             A foundational system for the Essential Capacities landing page and future site, grounded in the aesthetic of
-            <strong class="font-heading">Grounded Clarity</strong>.
+            <strong class="font-heading text-primary">Grounded Clarity</strong>.
           </p>
 
           <div class="mt-8 p-6 rounded-2xl bg-primary-soft border border-border">
-            <p class="text-ink/90">
+            <p class="text-ink/90 font-body text-lg">
               <strong class="font-heading">Purpose:</strong> Keep experiences spacious, trustworthy, and calm. The system is designed to help people move
               from complexity and reactivity toward integration and capable calm.
             </p>
@@ -234,25 +250,25 @@
         <!-- PRINCIPLES -->
         <section id="principles" class="mb-16">
           <h2 class="text-4xl font-heading font-bold mb-6">Design Principles</h2>
-          <p class="text-ink/80 mb-8">Treat these as non-negotiable anchors for the Essential Capacities experience.</p>
+          <p class="text-ink/80 mb-8 font-body text-lg">Treat these as non-negotiable anchors for the Essential Capacities experience.</p>
 
           <div class="grid md:grid-cols-3 gap-6">
             <article class="ds-card p-6">
               <i data-feather="map" class="h-8 w-8 text-primary"></i>
               <h3 class="mt-4 font-heading font-bold text-xl">Clarity as Care</h3>
-              <p class="mt-2 text-ink/75">Hierarchy is compassionate. Remove noise, keep copy readable, and make orientation effortless.</p>
+              <p class="mt-2 text-ink/75 font-body">Hierarchy is compassionate. Remove noise, keep copy readable, and make orientation effortless.</p>
             </article>
 
             <article class="ds-card p-6">
               <i data-feather="shield" class="h-8 w-8 text-primary"></i>
               <h3 class="mt-4 font-heading font-bold text-xl">Safety by Default</h3>
-              <p class="mt-2 text-ink/75">Gentle transitions, calm validation, and predictable interaction patterns reduce nervous-system load.</p>
+              <p class="mt-2 text-ink/75 font-body">Gentle transitions, calm validation, and predictable interaction patterns reduce nervous-system load.</p>
             </article>
 
             <article class="ds-card p-6">
               <i data-feather="layers" class="h-8 w-8 text-earth"></i>
               <h3 class="mt-4 font-heading font-bold text-xl">Breathing Room</h3>
-              <p class="mt-2 text-ink/75">Space is part of the design. Use generous padding and soft depth; avoid dense, urgent layouts.</p>
+              <p class="mt-2 text-ink/75 font-body">Space is part of the design. Use generous padding and soft depth; avoid dense, urgent layouts.</p>
             </article>
           </div>
         </section>
@@ -262,46 +278,104 @@
           <h2 class="text-4xl font-heading font-bold mb-6">Brand Essence</h2>
           <div class="ds-card p-8 border-2 border-primary/20">
             <h3 class="text-3xl font-heading font-bold text-primary">Grounded Clarity</h3>
-            <p class="mt-4 text-ink/85 text-lg">
+            <p class="mt-4 text-ink/85 text-lg font-body leading-relaxed">
               The aesthetic should feel like a deep, calm breath: organic and structured, like a well-drawn map of a living ecosystem.
               It invites discovery rather than demands compliance.
             </p>
 
             <div class="mt-6 p-5 rounded-2xl bg-safe-soft border border-border">
-              <p class="italic text-ink/90">
-                <strong class="font-heading">Guiding metaphor:</strong> If the user’s mind is a tangled forest, this experience is a clear, sunlit path through it,
+              <p class="italic text-ink/90 font-heading text-lg">
+                <strong class="font-bold">Guiding metaphor:</strong> If the user’s mind is a tangled forest, this experience is a clear, sunlit path through it,
                 with quiet guideposts.
               </p>
             </div>
           </div>
+        </section>
 
-          <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <!-- TYPOGRAPHY -->
+        <section id="typography" class="mb-16">
+          <h2 class="text-4xl font-heading font-bold mb-6">Typography & Formatting</h2>
+          <p class="text-ink/80 mb-8 font-body text-lg">
+            We use a classic pairing to evoke warmth and professionalism.
+            <strong class="text-ink">Lora (Serif)</strong> for headings brings a human, literary quality.
+            <strong class="text-ink">Nunito Sans (Sans-Serif)</strong> for body text ensures clean, modern readability.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-12">
             <div class="ds-card p-6">
-              <h4 class="font-heading font-bold text-xl">Feeling Goals</h4>
-              <ul class="mt-3 space-y-2 text-ink/80">
-                <li class="flex gap-2"><span class="text-primary">•</span>Clarity and spaciousness</li>
-                <li class="flex gap-2"><span class="text-primary">•</span>Grounding and safety</li>
-                <li class="flex gap-2"><span class="text-primary">•</span>Integration and calm capability</li>
-                <li class="flex gap-2"><span class="text-primary">•</span>Quiet empowerment</li>
-              </ul>
+              <h3 class="font-heading font-bold text-2xl">Headings — Lora</h3>
+              <p class="mt-2 text-sm font-mono text-ink/60">font-heading (Serif)</p>
+              <div class="mt-5 p-5 rounded-2xl bg-bg border border-border space-y-4">
+                <div>
+                  <p class="text-xs text-muted uppercase tracking-wider mb-1">Display (Hero)</p>
+                  <p class="font-heading text-5xl md:text-6xl font-bold text-ink">Grounded Clarity</p>
+                </div>
+                <div>
+                  <p class="text-xs text-muted uppercase tracking-wider mb-1">H1</p>
+                  <p class="font-heading text-4xl md:text-5xl font-bold text-ink">Page Title</p>
+                </div>
+                <div>
+                  <p class="text-xs text-muted uppercase tracking-wider mb-1">H2</p>
+                  <p class="font-heading text-3xl md:text-4xl font-bold text-ink">Section Heading</p>
+                </div>
+                <div>
+                  <p class="text-xs text-muted uppercase tracking-wider mb-1">H3</p>
+                  <p class="font-heading text-2xl md:text-3xl font-bold text-ink">Subsection Title</p>
+                </div>
+              </div>
             </div>
+
             <div class="ds-card p-6">
-              <h4 class="font-heading font-bold text-xl">Avoid</h4>
-              <ul class="mt-3 space-y-2 text-ink/80">
-                <li class="flex gap-2"><span class="text-earth">•</span>Busy / chaotic composition</li>
-                <li class="flex gap-2"><span class="text-earth">•</span>Clinical, corporate sterility</li>
-                <li class="flex gap-2"><span class="text-earth">•</span>Harsh borders and heavy shadows</li>
-                <li class="flex gap-2"><span class="text-earth">•</span>Urgency-by-default patterns</li>
-              </ul>
+              <h3 class="font-heading font-bold text-2xl">Body — Nunito Sans</h3>
+              <p class="mt-2 text-sm font-mono text-ink/60">font-body (Sans)</p>
+              <div class="mt-5 p-5 rounded-2xl bg-bg border border-border">
+                <p class="text-lg text-ink/90 font-body leading-relaxed">
+                  This paragraph demonstrates the default reading style. We use a base size of <strong>18px</strong> (1.125rem) with a line-height of <strong>1.6</strong> to ensure comfortable reading flow.
+                </p>
+                <p class="mt-4 font-body">
+                  Formatting includes <strong>bold for emphasis</strong>, <em>italics for nuance</em>, and <a href="#" class="text-primary underline underline-offset-2">links for navigation</a>.
+                </p>
+                <p class="mt-4 text-sm text-ink/70 font-body">
+                  Small text (14px) is used sparingly for captions or secondary information.
+                </p>
+              </div>
             </div>
+          </div>
+
+          <!-- Live Typography Example -->
+          <h3 class="text-2xl font-heading font-bold mb-4">Live Content Example</h3>
+          <div class="ds-card p-8 md:p-12 bg-surface border border-border">
+            <article class="prose-example">
+              <h1 class="font-heading text-4xl md:text-5xl font-bold text-ink mb-6">The Practice of Integration</h1>
+              <p class="text-xl text-ink/80 font-body leading-relaxed mb-8">
+                In a world that often demands fragmentation, the act of integrating our experiences becomes a radical practice of wholeness.
+              </p>
+
+              <h2 class="font-heading text-3xl font-bold text-ink mb-4">Why We Need Grounding</h2>
+              <p class="text-lg text-ink font-body leading-relaxed">
+                Grounding is not about stopping movement; it is about finding a stable center from which movement can flow. When we are grounded, we can meet complexity without losing our sense of self. This capacity is essential for navigating the modern landscape.
+              </p>
+
+              <blockquote class="my-8 border-l-4 border-primary pl-6 py-2 italic text-xl md:text-2xl text-ink/90 font-heading bg-primary-soft/30 rounded-r-lg">
+                “To be grounded is to be in relationship with reality as it is, not as we fear it to be.”
+              </blockquote>
+
+              <h3 class="font-heading text-2xl font-bold text-ink mb-3">Core Benefits</h3>
+              <ul class="text-lg text-ink font-body leading-relaxed list-disc pl-5 space-y-2">
+                <li><strong>Reduced Reactivity:</strong> A pause between stimulus and response.</li>
+                <li><strong>Increased Clarity:</strong> Seeing the signal amidst the noise.</li>
+                <li><strong>Sustainable Energy:</strong> Moving from a place of rest rather than adrenaline.</li>
+              </ul>
+            </article>
           </div>
         </section>
 
         <!-- COLORS -->
         <section id="colors" class="mb-16">
           <h2 class="text-4xl font-heading font-bold mb-6">Color Palette (ANS Map)</h2>
-          <p class="text-ink/80 mb-8">
+          <p class="text-ink/80 mb-8 font-body text-lg">
             Muted, natural, sophisticated. Displayed with hex and Tailwind token classes to keep implementation consistent.
+            <br><span class="text-sm text-ink/60">Note: All text combinations shown meet WCAG AA contrast standards.</span>
           </p>
 
           <div class="grid md:grid-cols-2 gap-6">
@@ -311,7 +385,7 @@
                 <span class="font-mono text-sm">#FCF9F3</span>
               </div>
               <p class="mt-4 font-heading font-semibold">Tailwind: <span class="font-mono">bg-bg</span></p>
-              <p class="mt-2 text-sm text-ink/70">Primary canvas. Keeps the interface warm and human.</p>
+              <p class="mt-2 text-sm text-ink/70 font-body">Primary canvas. Keeps the interface warm and human.</p>
             </div>
 
             <div class="ds-card p-5">
@@ -320,7 +394,7 @@
                 <span class="font-mono text-sm">#3A4D7E</span>
               </div>
               <p class="mt-4 font-heading font-semibold">Tailwind: <span class="font-mono">bg-primary</span>, <span class="font-mono">text-primary</span></p>
-              <p class="mt-2 text-sm text-ink/70">Buttons, links, key headings, and active navigation.</p>
+              <p class="mt-2 text-sm text-ink/70 font-body">Buttons, links, key headings, and active navigation.</p>
             </div>
 
             <div class="ds-card p-5">
@@ -329,7 +403,7 @@
                 <span class="font-mono text-sm">#FDECB9</span>
               </div>
               <p class="mt-4 font-heading font-semibold">Tailwind: <span class="font-mono">bg-safe</span></p>
-              <p class="mt-2 text-sm text-ink/70">Gentle section backgrounds, highlights, supportive callouts.</p>
+              <p class="mt-2 text-sm text-ink/70 font-body">Gentle section backgrounds, highlights, supportive callouts.</p>
             </div>
 
             <div class="ds-card p-5">
@@ -338,7 +412,7 @@
                 <span class="font-mono text-sm">#D97A5B</span>
               </div>
               <p class="mt-4 font-heading font-semibold">Tailwind: <span class="font-mono">bg-earth</span>, <span class="font-mono">text-earth</span></p>
-              <p class="mt-2 text-sm text-ink/70">Use sparingly: diagrams and rare caution moments (not “error red”).</p>
+              <p class="mt-2 text-sm text-ink/70 font-body">Use sparingly: diagrams and rare caution moments (not “error red”).</p>
             </div>
           </div>
 
@@ -373,60 +447,60 @@
               <p class="mt-3 font-heading font-semibold">Tailwind: <span class="font-mono">border-border</span></p>
             </div>
           </div>
-
-          <div class="mt-8 p-6 rounded-2xl bg-safe-soft border border-border">
-            <h4 class="font-heading font-bold text-lg">Color Guidelines</h4>
-            <ul class="mt-3 space-y-2 text-ink/80">
-              <li><strong class="font-heading">Background:</strong> Use <span class="font-mono">bg-bg</span> as default; reserve pure white for cards and content containers.</li>
-              <li><strong class="font-heading">Text:</strong> Default ink; use 60–80% opacity for secondary text while preserving readability.</li>
-              <li><strong class="font-heading">Safe:</strong> Prefer ink text on safe backgrounds (avoid long blocks of colored text).</li>
-              <li><strong class="font-heading">Earth:</strong> Keep rare and intentional; it should feel like warm soil, not alarm.</li>
-            </ul>
-          </div>
         </section>
 
-        <!-- TYPOGRAPHY -->
-        <section id="typography" class="mb-16">
-          <h2 class="text-4xl font-heading font-bold mb-6">Typography & Formatting</h2>
-          <p class="text-ink/80 mb-8">Headings provide structure (Inter). Body provides grounded readability (Lora).</p>
+        <!-- SPACING SYSTEM -->
+        <section id="spacing" class="mb-16">
+          <h2 class="text-4xl font-heading font-bold mb-6">Spacing System</h2>
+          <p class="text-ink/80 mb-8 font-body text-lg">
+            Consistent spacing creates rhythm and calm. We use a 4px baseline grid.
+          </p>
 
-          <div class="grid md:grid-cols-2 gap-6">
-            <div class="ds-card p-6">
-              <h3 class="font-heading font-bold text-2xl">Headings — Inter</h3>
-              <p class="mt-2 text-sm font-mono text-ink/60">font-heading</p>
-              <div class="mt-5 p-5 rounded-2xl bg-bg border border-border">
-                <p class="font-heading text-5xl font-bold">Display H1</p>
-                <p class="font-heading text-3xl font-bold mt-3">H1 Heading</p>
-                <p class="font-heading text-2xl font-semibold mt-2">H2 Heading</p>
-                <p class="font-heading text-xl font-semibold mt-2">H3 Heading</p>
-                <p class="font-heading text-lg font-semibold mt-2">H4 Heading</p>
+          <div class="ds-card p-6 overflow-hidden">
+            <div class="space-y-6">
+              <div class="flex items-center gap-4">
+                <div class="w-16 text-sm font-mono text-muted">4px</div>
+                <div class="h-4 w-1 bg-primary rounded"></div>
+                <span class="text-sm text-ink/60">xs (gap-1)</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="w-16 text-sm font-mono text-muted">8px</div>
+                <div class="h-4 w-2 bg-primary rounded"></div>
+                <span class="text-sm text-ink/60">sm (gap-2)</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="w-16 text-sm font-mono text-muted">16px</div>
+                <div class="h-4 w-4 bg-primary rounded"></div>
+                <span class="text-sm text-ink/60">md (gap-4, p-4) - Default component padding</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="w-16 text-sm font-mono text-muted">24px</div>
+                <div class="h-4 w-6 bg-primary rounded"></div>
+                <span class="text-sm text-ink/60">lg (gap-6, p-6) - Card padding</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="w-16 text-sm font-mono text-muted">32px</div>
+                <div class="h-4 w-8 bg-primary rounded"></div>
+                <span class="text-sm text-ink/60">xl (gap-8, my-8) - Section subsection spacing</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="w-16 text-sm font-mono text-muted">48px</div>
+                <div class="h-4 w-12 bg-primary rounded"></div>
+                <span class="text-sm text-ink/60">2xl (my-12) - Major section spacing</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="w-16 text-sm font-mono text-muted">64px</div>
+                <div class="h-4 w-16 bg-primary rounded"></div>
+                <span class="text-sm text-ink/60">3xl (my-16) - Page section spacing</span>
               </div>
             </div>
-
-            <div class="ds-card p-6">
-              <h3 class="font-heading font-bold text-2xl">Body — Lora</h3>
-              <p class="mt-2 text-sm font-mono text-ink/60">font-body</p>
-              <div class="mt-5 p-5 rounded-2xl bg-bg border border-border">
-                <p class="text-lg text-ink/90">This paragraph demonstrates the default reading style: spacious line-height, warm tone, and calm rhythm.</p>
-                <p class="mt-4">Formatting: <strong>Bold</strong>, <em>Italics</em>, <mark class="px-1 rounded bg-safe">Highlighted</mark>.</p>
-                <p class="mt-4 text-ink/70">Secondary text uses reduced emphasis while staying accessible.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="mt-8 ds-card p-8">
-            <h3 class="font-heading font-bold text-2xl">Blockquote</h3>
-            <blockquote class="mt-5 border-l-4 border-primary pl-6 py-1 italic text-2xl text-ink/90">
-              “Imagine a digital sanctuary—a place of learning that feels as calm and integrated as the state of being it teaches.”
-            </blockquote>
-            <p class="mt-4 text-sm text-ink/60">— Essential Capacities, aesthetic prompt</p>
           </div>
         </section>
 
         <!-- VISUAL ASSETS & IMAGERY -->
         <section id="assets" class="mb-16">
           <h2 class="text-4xl font-heading font-bold mb-6">Visual Assets & Imagery</h2>
-          <p class="text-ink/80 mb-8">Evocative, metaphorical nature imagery + clean, single-weight line icons. Soft corners, subtle depth.</p>
+          <p class="text-ink/80 mb-8 font-body text-lg">Evocative, metaphorical nature imagery + clean, single-weight line icons. Soft corners, subtle depth.</p>
 
           <h3 class="text-2xl font-heading font-bold">Logo</h3>
           <div class="mt-4 grid md:grid-cols-2 gap-6">
@@ -438,38 +512,38 @@
               </div>
               <div class="p-6">
                 <h4 class="font-heading font-bold text-xl">Context Institute (Primary Lockup)</h4>
-                <p class="mt-2 text-ink/75">Use in header/footer and official communications.</p>
+                <p class="mt-2 text-ink/75 font-body">Use in header/footer and official communications.</p>
               </div>
             </div>
 
             <div class="visual-element-card">
               <div class="p-8 bg-bg flex items-center justify-center">
                 <div class="h-28 w-28 rounded-3xl bg-safe border border-border flex items-center justify-center">
-                  <span class="font-heading font-semibold text-primary">EC</span>
+                  <span class="font-heading font-semibold text-primary text-2xl">EC</span>
                 </div>
               </div>
               <div class="p-6">
                 <h4 class="font-heading font-bold text-xl">Essential Capacities Mark (Placeholder)</h4>
-                <p class="mt-2 text-ink/75">A simplified icon for favicons, social avatars, and small UI moments.</p>
+                <p class="mt-2 text-ink/75 font-body">A simplified icon for favicons, social avatars, and small UI moments.</p>
               </div>
             </div>
           </div>
 
           <h3 class="mt-12 text-2xl font-heading font-bold">Approved Photography Examples</h3>
-          <p class="mt-2 text-ink/80">Use these as reference for tone: metaphorical, nature-based, not literal “course” imagery.</p>
+          <p class="mt-2 text-ink/80 font-body">Use these as reference for tone: metaphorical, nature-based, not literal “course” imagery.</p>
 
           <div class="mt-6 grid md:grid-cols-3 gap-6">
             <figure class="visual-element-card">
               <img src="seedling-on-stump2.jpg" alt="Seedling on stump" class="w-full aspect-[3/2] object-cover" />
-              <figcaption class="p-4 text-sm text-ink/70">Metaphor: growth, history, unseen connections.</figcaption>
+              <figcaption class="p-4 text-sm text-ink/70 font-body">Metaphor: growth, history, unseen connections.</figcaption>
             </figure>
             <figure class="visual-element-card">
               <img src="water-boys2.jpg" alt="Water ripples" class="w-full aspect-[3/2] object-cover" />
-              <figcaption class="p-4 text-sm text-ink/70">Metaphor: influence and feedback loops.</figcaption>
+              <figcaption class="p-4 text-sm text-ink/70 font-body">Metaphor: influence and feedback loops.</figcaption>
             </figure>
             <figure class="visual-element-card">
               <img src="spiral-stained-glass2.jpg" alt="Spiral stained glass" class="w-full aspect-[3/2] object-cover" />
-              <figcaption class="p-4 text-sm text-ink/70">Metaphor: layers, integration, pattern.</figcaption>
+              <figcaption class="p-4 text-sm text-ink/70 font-body">Metaphor: layers, integration, pattern.</figcaption>
             </figure>
           </div>
 
@@ -480,7 +554,7 @@
               <div class="mt-4 overflow-hidden rounded-3xl border border-border shadow-soft">
                 <img src="https://placehold.co/600x400" alt="Placeholder (600x400)" class="w-full object-cover" />
               </div>
-              <ul class="mt-4 space-y-2 text-ink/80">
+              <ul class="mt-4 space-y-2 text-ink/80 font-body">
                 <li><strong class="font-heading">Radius:</strong> rounded-3xl (soft/organic).</li>
                 <li><strong class="font-heading">Shadow:</strong> subtle, diffused.</li>
                 <li><strong class="font-heading">Usage:</strong> hero, feature cards, section imagery.</li>
@@ -491,12 +565,12 @@
               <div class="mt-4 overflow-hidden rounded-3xl border border-border">
                 <img src="https://placehold.co/600x400" alt="Placeholder hero crop" class="w-full object-cover aspect-[16/9]" />
               </div>
-              <p class="mt-4 text-ink/80">Prefer calm compositions with negative space for overlaid text (avoid busy backgrounds).</p>
+              <p class="mt-4 text-ink/80 font-body">Prefer calm compositions with negative space for overlaid text (avoid busy backgrounds).</p>
             </div>
           </div>
 
           <h3 class="mt-12 text-2xl font-heading font-bold">Iconography</h3>
-          <p class="mt-2 text-ink/80">Feather Icons — consistent, single-weight line art.</p>
+          <p class="mt-2 text-ink/80 font-body">Feather Icons — consistent, single-weight line art.</p>
           <div class="mt-6 component-preview">
             <div class="grid grid-cols-4 sm:grid-cols-6 gap-6">
               <div class="flex flex-col items-center gap-2"><i data-feather="map" class="h-7 w-7 text-primary"></i><span class="text-xs text-ink/60 font-heading">Map</span></div>
@@ -513,21 +587,12 @@
               <div class="flex flex-col items-center gap-2"><i data-feather="wind" class="h-7 w-7 text-primary"></i><span class="text-xs text-ink/60 font-heading">Breath</span></div>
             </div>
           </div>
-
-          <h3 class="mt-12 text-2xl font-heading font-bold">Reference UI Seed</h3>
-          <p class="mt-2 text-ink/80">A snapshot of the current community dashboard aesthetic (for continuity):</p>
-          <div class="mt-4 visual-element-card">
-            <img src="bf_commons_aesthetic_seed.png" alt="BF Commons aesthetic seed screenshot" class="w-full object-cover" />
-            <div class="p-5">
-              <p class="text-sm text-ink/70">Note the soft corners, gentle depth, and calm use of indigo for structure and emphasis.</p>
-            </div>
-          </div>
         </section>
 
         <!-- BUTTONS & CTAS -->
         <section id="buttons" class="mb-16">
           <h2 class="text-4xl font-heading font-bold mb-6">Buttons & CTAs</h2>
-          <p class="text-ink/80 mb-8">CTAs should feel invitational. Smooth transitions; no jarring hover effects.</p>
+          <p class="text-ink/80 mb-8 font-body text-lg">CTAs should feel invitational. Smooth transitions; no jarring hover effects.</p>
 
           <h3 class="text-2xl font-heading font-bold">Variants</h3>
           <div class="mt-4 component-preview">
@@ -576,7 +641,7 @@
         <!-- FORMS -->
         <section id="forms" class="mb-16">
           <h2 class="text-4xl font-heading font-bold mb-6">Form Elements</h2>
-          <p class="text-ink/80 mb-8">Supportive, calm, and explicit. Validation should inform without alarming.</p>
+          <p class="text-ink/80 mb-8 font-body text-lg">Supportive, calm, and explicit. Validation should inform without alarming.</p>
 
           <div class="component-preview">
             <form class="w-full max-w-xl space-y-5" aria-label="Form components preview">
@@ -586,9 +651,9 @@
                   id="ds-name"
                   type="text"
                   placeholder="e.g., Alex Example"
-                  class="mt-2 w-full rounded-xl border border-border bg-surface px-4 py-3 text-ink placeholder:text-ink/40 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+                  class="mt-2 w-full rounded-xl border border-border bg-surface px-4 py-3 text-ink placeholder:text-ink/40 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary font-body"
                 />
-                <p class="mt-2 text-sm text-ink/60">Use a friendly example and keep helper text short.</p>
+                <p class="mt-2 text-sm text-ink/60 font-body">Use a friendly example and keep helper text short.</p>
               </div>
 
               <div>
@@ -598,7 +663,7 @@
                     id="ds-success"
                     type="email"
                     value="name@example.com"
-                    class="w-full rounded-xl border border-emerald-500/60 bg-surface px-4 py-3 pr-10 text-ink focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                    class="w-full rounded-xl border border-emerald-500/60 bg-surface px-4 py-3 pr-10 text-ink focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 font-body"
                   />
                   <i data-feather="check" class="h-5 w-5 text-emerald-600 absolute right-3 top-1/2 -translate-y-1/2"></i>
                 </div>
@@ -612,7 +677,7 @@
                     id="ds-error"
                     type="email"
                     value="name@"
-                    class="w-full rounded-xl border border-earth/70 bg-surface px-4 py-3 pr-10 text-ink focus:outline-none focus:ring-2 focus:ring-earth focus:border-earth"
+                    class="w-full rounded-xl border border-earth/70 bg-surface px-4 py-3 pr-10 text-ink focus:outline-none focus:ring-2 focus:ring-earth focus:border-earth font-body"
                   />
                   <i data-feather="alert-circle" class="h-5 w-5 text-earth absolute right-3 top-1/2 -translate-y-1/2"></i>
                 </div>
@@ -625,18 +690,18 @@
                   id="ds-message"
                   rows="4"
                   placeholder="Write a short message…"
-                  class="mt-2 w-full rounded-xl border border-border bg-surface px-4 py-3 text-ink placeholder:text-ink/40 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+                  class="mt-2 w-full rounded-xl border border-border bg-surface px-4 py-3 text-ink placeholder:text-ink/40 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary font-body"
                 ></textarea>
               </div>
 
               <div class="flex flex-wrap items-center gap-6">
                 <label class="inline-flex items-center gap-3">
                   <input type="checkbox" class="h-5 w-5 rounded border-border text-primary focus:ring-primary" checked />
-                  <span class="text-ink/80">Checkbox</span>
+                  <span class="text-ink/80 font-body">Checkbox</span>
                 </label>
 
                 <label class="inline-flex items-center gap-3">
-                  <span class="text-ink/80">Toggle</span>
+                  <span class="text-ink/80 font-body">Toggle</span>
                   <span class="relative inline-flex h-7 w-12 items-center rounded-full bg-primary/25 border border-border" aria-hidden="true">
                     <span class="inline-block h-6 w-6 translate-x-5 rounded-full bg-primary shadow-sm"></span>
                   </span>
@@ -649,7 +714,7 @@
         <!-- INTERACTIVE COMPONENTS -->
         <section id="components" class="mb-16">
           <h2 class="text-4xl font-heading font-bold mb-6">Interactive Components</h2>
-          <p class="text-ink/80 mb-8">Soft, breathable, trustworthy components for landing-page sections and beyond.</p>
+          <p class="text-ink/80 mb-8 font-body text-lg">Soft, breathable, trustworthy components for landing-page sections and beyond.</p>
 
           <h3 class="text-2xl font-heading font-bold">Cards</h3>
           <div class="mt-4 component-preview">
@@ -660,7 +725,7 @@
                 </div>
                 <h4 class="font-heading font-bold text-lg">A capability, not a checkbox</h4>
               </div>
-              <p class="mt-3 text-ink/75">Cards hold small, meaningful chunks. Keep copy short, warm, and specific.</p>
+              <p class="mt-3 text-ink/75 font-body">Cards hold small, meaningful chunks. Keep copy short, warm, and specific.</p>
               <div class="mt-5 flex items-center gap-3">
                 <button class="font-heading font-semibold px-4 py-2 rounded-xl bg-primary text-white hover:bg-primary-deep transition-colors">Learn more</button>
                 <button class="font-heading font-semibold px-4 py-2 rounded-xl text-primary hover:bg-primary-soft transition-colors">Secondary</button>
@@ -674,14 +739,14 @@
               <i data-feather="info" class="h-5 w-5 text-primary mt-0.5"></i>
               <div>
                 <p class="font-heading font-semibold">Supportive info</p>
-                <p class="text-ink/75">Use for gentle guidance, reminders, and clarifications.</p>
+                <p class="text-ink/75 font-body">Use for gentle guidance, reminders, and clarifications.</p>
               </div>
             </div>
             <div class="rounded-2xl border border-earth/40 bg-earth-soft/40 p-5 flex gap-3">
               <i data-feather="alert-triangle" class="h-5 w-5 text-earth mt-0.5"></i>
               <div>
                 <p class="font-heading font-semibold">Caution (rare)</p>
-                <p class="text-ink/75">Keep language calm. Prefer solutions over warnings.</p>
+                <p class="text-ink/75 font-body">Keep language calm. Prefer solutions over warnings.</p>
               </div>
             </div>
           </div>
@@ -700,7 +765,7 @@
           </div>
 
           <h3 class="mt-10 text-2xl font-heading font-bold">Testimonial / Avatar</h3>
-          <p class="mt-2 text-ink/80">Use real people, treated respectfully: soft edges, subtle shadow, clear attribution.</p>
+          <p class="mt-2 text-ink/80 font-body">Use real people, treated respectfully: soft edges, subtle shadow, clear attribution.</p>
           <div class="mt-4 ds-card p-6">
             <div class="flex flex-col md:flex-row gap-6 md:items-center">
               <div class="flex items-center gap-4">
@@ -711,10 +776,10 @@
                 />
                 <div>
                   <p class="font-heading font-bold text-ink">Robert Gilman</p>
-                  <p class="text-sm text-ink/60">Faculty / Guide</p>
+                  <p class="text-sm text-ink/60 font-body">Faculty / Guide</p>
                 </div>
               </div>
-              <blockquote class="md:pl-6 md:border-l md:border-border text-ink/85 italic text-lg">
+              <blockquote class="md:pl-6 md:border-l md:border-border text-ink/85 italic text-lg font-heading">
                 “The work is a gentle guide—supportive, clear, and grounded. You can feel your own capacity return.”
               </blockquote>
             </div>
@@ -724,7 +789,7 @@
         <!-- NAVIGATION EXAMPLES -->
         <section id="navigation" class="mb-16">
           <h2 class="text-4xl font-heading font-bold mb-6">Navigation & Mobile Examples</h2>
-          <p class="text-ink/80 mb-8">Static visuals to align on header structure and mobile menu behavior (open state).</p>
+          <p class="text-ink/80 mb-8 font-body text-lg">Static visuals to align on header structure and mobile menu behavior (open state).</p>
 
           <h3 class="text-2xl font-heading font-bold">Desktop Navbar</h3>
           <div class="mt-4 ds-card overflow-hidden">
@@ -747,7 +812,7 @@
               </div>
             </div>
             <div class="p-6 bg-bg">
-              <p class="text-sm text-ink/70">Guideline: Keep nav minimal (4–5 items). Use one clear primary CTA.</p>
+              <p class="text-sm text-ink/70 font-body">Guideline: Keep nav minimal (4–5 items). Use one clear primary CTA.</p>
             </div>
           </div>
 
@@ -755,7 +820,7 @@
           <div class="mt-4 ds-card overflow-hidden">
             <div class="relative bg-bg p-6">
               <div class="absolute inset-0 bg-ink/20" aria-hidden="true"></div>
-              <div class="relative max-w-sm bg-surface border border-border rounded-3xl shadow-soft overflow-hidden">
+              <div class="relative max-w-sm bg-surface border border-border rounded-3xl shadow-soft overflow-hidden ml-auto">
                 <div class="p-5 border-b border-border flex items-center justify-between">
                   <div class="flex items-center gap-3">
                     <div class="h-9 w-9 rounded-xl bg-safe border border-border flex items-center justify-center">
@@ -770,13 +835,13 @@
 
                 <nav class="p-5" aria-label="Mobile">
                   <ul class="space-y-3">
-                    <li><a class="block font-heading font-semibold text-ink hover:text-primary" href="#">Program</a></li>
-                    <li><a class="block font-heading font-semibold text-ink hover:text-primary" href="#">Curriculum</a></li>
-                    <li><a class="block font-heading font-semibold text-ink hover:text-primary" href="#">Faculty</a></li>
-                    <li><a class="block font-heading font-semibold text-ink hover:text-primary" href="#">FAQ</a></li>
+                    <li><a class="block font-heading font-semibold text-ink hover:text-primary text-lg" href="#">Program</a></li>
+                    <li><a class="block font-heading font-semibold text-ink hover:text-primary text-lg" href="#">Curriculum</a></li>
+                    <li><a class="block font-heading font-semibold text-ink hover:text-primary text-lg" href="#">Faculty</a></li>
+                    <li><a class="block font-heading font-semibold text-ink hover:text-primary text-lg" href="#">FAQ</a></li>
                   </ul>
 
-                  <div class="mt-6 grid gap-3">
+                  <div class="mt-8 grid gap-3">
                     <button class="w-full font-heading font-semibold px-4 py-3 rounded-xl bg-primary text-white hover:bg-primary-deep transition-colors">Join the program</button>
                     <button class="w-full font-heading font-semibold px-4 py-3 rounded-xl border border-primary text-primary hover:bg-primary-soft transition-colors">Sign in</button>
                   </div>
@@ -789,12 +854,12 @@
         <!-- APPLICATIONS -->
         <section id="applications" class="mb-16">
           <h2 class="text-4xl font-heading font-bold mb-6">Applications</h2>
-          <p class="text-ink/80 mb-8">How this visual language should show up across deliverables (web, PDF, email).</p>
+          <p class="text-ink/80 mb-8 font-body text-lg">How this visual language should show up across deliverables (web, PDF, email).</p>
 
           <div class="grid md:grid-cols-3 gap-6">
             <div class="ds-card p-6">
               <h3 class="font-heading font-bold text-xl">Landing Page</h3>
-              <ul class="mt-3 space-y-2 text-ink/80 text-sm">
+              <ul class="mt-3 space-y-2 text-ink/80 text-sm font-body">
                 <li>• Hero: metaphorical image + calm headline</li>
                 <li>• One primary CTA; secondary as outline/ghost</li>
                 <li>• Sections feel like “chapters” with breathing room</li>
@@ -802,7 +867,7 @@
             </div>
             <div class="ds-card p-6">
               <h3 class="font-heading font-bold text-xl">Email</h3>
-              <ul class="mt-3 space-y-2 text-ink/80 text-sm">
+              <ul class="mt-3 space-y-2 text-ink/80 text-sm font-body">
                 <li>• Single column, generous padding</li>
                 <li>• Keep imagery minimal; prioritize readability</li>
                 <li>• Same CTA hierarchy as web</li>
@@ -810,7 +875,7 @@
             </div>
             <div class="ds-card p-6">
               <h3 class="font-heading font-bold text-xl">PDF / Program Overview</h3>
-              <ul class="mt-3 space-y-2 text-ink/80 text-sm">
+              <ul class="mt-3 space-y-2 text-ink/80 text-sm font-body">
                 <li>• Serif body supports long reading</li>
                 <li>• Use safe backgrounds for callouts</li>
                 <li>• Maintain margins and calm rhythm</li>
@@ -825,8 +890,8 @@
               <img src="cilogoL.svg" alt="Context Institute" class="h-8 w-auto max-w-[56px]" />
             </div>
             <p class="mt-5 font-heading font-semibold text-ink">This design system is a living document.</p>
-            <p class="mt-2 text-ink/70">Update examples as the landing page evolves; keep principles stable.</p>
-            <p class="mt-6 text-sm text-ink/50">Essential Capacities — Visual Design System • v0.1 • Jan 2026</p>
+            <p class="mt-2 text-ink/70 font-body">Update examples as the landing page evolves; keep principles stable.</p>
+            <p class="mt-6 text-sm text-ink/50 font-body">Essential Capacities — Visual Design System • v0.2 • Feb 2026</p>
           </div>
         </footer>
       </div>

@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essential Capacities | Context Institute</title>
+    <meta name="description" content="Develop game-changing foundational capacities to navigate turbulent times. A 4-week course on systems change & cultural evolution.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bg: "#FCF9F3",
+                        surface: "#FFFFFF",
+                        ink: "#1F2937",
+                        muted: "#6B7280",
+                        border: "#E7E0D3",
+                        primary: "#3A4D7E",
+                        "primary-soft": "#E7ECF6",
+                        "primary-deep": "#26355A",
+                        safe: "#FDECB9",
+                        "safe-soft": "#FFF6DB",
+                        "safe-deep": "#E7C56A",
+                        earth: "#D97A5B",
+                        "earth-soft": "#F5D2C7",
+                        "earth-deep": "#B85F45",
+                    },
+                    fontFamily: {
+                        heading: ["Lora", "serif"],
+                        body: ["Nunito Sans", "sans-serif"],
+                    },
+                    boxShadow: {
+                        soft: "0 12px 30px rgba(31, 41, 55, 0.08)",
+                    },
+                },
+            },
+        };
+    </script>
+
+    <style>
+        /* Custom Utilities */
+        .text-balance { text-wrap: balance; }
+
+        /* Smooth Reveal Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-bg text-ink font-body antialiased selection:bg-safe selection:text-ink">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-bg/90 backdrop-blur-md border-b border-border transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <img src="assets/cilogoL.svg" alt="Context Institute" class="h-8 w-auto">
+                    <div class="hidden md:block leading-tight">
+                        <p class="font-heading font-bold text-ink text-lg">Essential Capacities</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#problem" class="font-heading font-semibold text-ink/80 hover:text-primary transition-colors">The Challenge</a>
+                    <a href="#solution" class="font-heading font-semibold text-ink/80 hover:text-primary transition-colors">The Program</a>
+                    <a href="#faculty" class="font-heading font-semibold text-ink/80 hover:text-primary transition-colors">Faculty</a>
+                    <a href="#pricing" class="font-heading font-semibold text-ink/80 hover:text-primary transition-colors">Pricing</a>
+                    <a href="#faq" class="font-heading font-semibold text-ink/80 hover:text-primary transition-colors">FAQ</a>
+                    <a href="#register" class="font-heading font-semibold px-5 py-2.5 rounded-xl bg-primary text-white hover:bg-primary-deep transition-colors shadow-sm hover:shadow-md">
+                        Register Now
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-ink hover:text-primary p-2">
+                        <i data-feather="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-surface border-b border-border absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-2 shadow-soft">
+                <a href="#problem" class="block px-3 py-2 rounded-lg text-base font-heading font-semibold text-ink hover:bg-safe-soft hover:text-primary">The Challenge</a>
+                <a href="#solution" class="block px-3 py-2 rounded-lg text-base font-heading font-semibold text-ink hover:bg-safe-soft hover:text-primary">The Program</a>
+                <a href="#faculty" class="block px-3 py-2 rounded-lg text-base font-heading font-semibold text-ink hover:bg-safe-soft hover:text-primary">Faculty</a>
+                <a href="#pricing" class="block px-3 py-2 rounded-lg text-base font-heading font-semibold text-ink hover:bg-safe-soft hover:text-primary">Pricing</a>
+                <a href="#register" class="block w-full text-center mt-4 font-heading font-semibold px-5 py-3 rounded-xl bg-primary text-white hover:bg-primary-deep transition-colors">
+                    Register Now
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute top-0 right-0 -z-10 w-1/2 h-full bg-gradient-to-l from-safe-soft/50 to-transparent opacity-60"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <div class="reveal active">
+                    <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-soft border border-primary/20 text-sm font-heading font-semibold text-primary mb-6">
+                        <i data-feather="compass" class="h-4 w-4"></i>
+                        Navigating Complexity
+                    </span>
+                    <h1 class="font-heading text-5xl lg:text-6xl font-bold text-ink leading-[1.1] mb-6 text-balance">
+                        Discover a better way to navigate our turbulent times
+                    </h1>
+                    <p class="text-xl text-ink/80 font-body leading-relaxed mb-8 max-w-lg">
+                        Develop game-changing foundational capacities and use them to transform <em>your</em> challenges, be they personal, organizational or global.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#register" class="inline-flex justify-center items-center font-heading font-semibold px-8 py-4 rounded-xl bg-primary text-white text-lg hover:bg-primary-deep transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5">
+                            Register Now
+                        </a>
+                        <a href="#program-details" class="inline-flex justify-center items-center font-heading font-semibold px-8 py-4 rounded-xl border border-primary text-primary bg-transparent hover:bg-primary-soft transition-colors">
+                            Learn More
+                        </a>
+                    </div>
+
+                    <div class="mt-10 p-5 bg-surface/60 backdrop-blur border border-border rounded-2xl max-w-md">
+                        <p class="text-sm text-ink/70 font-body italic">
+                            "Articulates a cohesive new whole-system approach for moving beyond the current polycrisis."
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative reveal delay-200">
+                    <div class="relative rounded-3xl overflow-hidden shadow-soft border border-border bg-surface aspect-[4/3] flex items-center justify-center group">
+                        <!-- Placeholder for Gyroscope Animation -->
+                        <img src="assets/water-boys2.jpg" alt="Metaphorical representation of balance and flow" class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+                        <div class="relative z-10 bg-surface/90 backdrop-blur p-6 rounded-2xl shadow-lg max-w-xs text-center border border-border">
+                            <i data-feather="activity" class="h-8 w-8 text-primary mx-auto mb-3"></i>
+                            <p class="font-heading font-bold text-lg text-primary">From Wobble to Spin</p>
+                            <p class="text-sm text-ink/70 mt-1">Find your stable center amidst the movement.</p>
+                        </div>
+                    </div>
+                    <!-- Decorative blob -->
+                    <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-safe/30 rounded-full blur-3xl -z-10"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof / Testimonials 1 -->
+    <section class="py-16 bg-surface border-y border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="reveal">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="assets/testimonial_todd.png" alt="Todd" class="h-14 w-14 rounded-full object-cover border border-border">
+                        <div>
+                            <p class="font-heading font-bold text-ink">Todd</p>
+                            <p class="text-xs text-ink/60 uppercase tracking-wide">Alumni</p>
+                        </div>
+                    </div>
+                    <p class="text-lg text-ink/80 italic font-body leading-relaxed">
+                        “The Essential Capacities Programs offer tools, practices, and experiences that have helped me to find inner peace (amongst the chaos)... The 7 Keys are like giving people the missing manual for how to work together effectively.”
+                    </p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="reveal delay-100">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="assets/testimonial_celeste.png" alt="Celeste" class="h-14 w-14 rounded-full object-cover border border-border">
+                        <div>
+                            <p class="font-heading font-bold text-ink">Celeste</p>
+                            <p class="text-xs text-ink/60 uppercase tracking-wide">Alumni</p>
+                        </div>
+                    </div>
+                    <p class="text-lg text-ink/80 italic font-body leading-relaxed">
+                        “I feel like a ship that understands the coordinates of my destination and has the navigation capability to chart a course... I’ve gained a level of inner calm that’s been hard to find in our current turbulent times.”
+                    </p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="reveal delay-200">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="assets/testimonial_denise.png" alt="Denise" class="h-14 w-14 rounded-full object-cover border border-border">
+                        <div>
+                            <p class="font-heading font-bold text-ink">Denise</p>
+                            <p class="text-xs text-ink/60 uppercase tracking-wide">Alumni</p>
+                        </div>
+                    </div>
+                    <p class="text-lg text-ink/80 italic font-body leading-relaxed">
+                        “The Seven Keys provided a pathway to connect my current projects to a higher meaning — a north star of why I’m motivated to do this work and how to share it with others.”
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem" class="py-24 bg-bg relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 reveal">
+                <h2 class="font-heading text-4xl font-bold text-ink mb-6">The Challenge of Our Times</h2>
+                <p class="text-xl text-ink/70 font-body">Navigating the modern landscape often feels like walking through a storm without a map.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-surface p-8 rounded-3xl border border-border shadow-sm reveal">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="p-3 bg-earth-soft/30 rounded-xl text-earth-deep">
+                            <i data-feather="cloud-rain" class="h-6 w-6"></i>
+                        </div>
+                        <h3 class="font-heading text-2xl font-bold text-ink">Are you feeling...</h3>
+                    </div>
+                    <ul class="space-y-4 text-ink/80 font-body">
+                        <li class="flex items-start gap-3">
+                            <i data-feather="x" class="h-5 w-5 text-earth mt-0.5 shrink-0"></i>
+                            <span>Overwhelmed and disconnected from who you really are</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-feather="x" class="h-5 w-5 text-earth mt-0.5 shrink-0"></i>
+                            <span>Trapped in old habits and reactions</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-feather="x" class="h-5 w-5 text-earth mt-0.5 shrink-0"></i>
+                            <span>Uncertain how to navigate through all the uncertainty</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-feather="x" class="h-5 w-5 text-earth mt-0.5 shrink-0"></i>
+                            <span>Anxious for your future and grief at what's being lost</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-surface p-8 rounded-3xl border border-border shadow-sm reveal delay-100">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="p-3 bg-earth-soft/30 rounded-xl text-earth-deep">
+                            <i data-feather="users" class="h-6 w-6"></i>
+                        </div>
+                        <h3 class="font-heading text-2xl font-bold text-ink">In your groups...</h3>
+                    </div>
+                    <ul class="space-y-4 text-ink/80 font-body">
+                        <li class="flex items-start gap-3">
+                            <i data-feather="alert-circle" class="h-5 w-5 text-earth mt-0.5 shrink-0"></i>
+                            <span>Misunderstandings and responding to reactivity in others</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-feather="alert-circle" class="h-5 w-5 text-earth mt-0.5 shrink-0"></i>
+                            <span>Rigidity where there needs to be creativity</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-feather="alert-circle" class="h-5 w-5 text-earth mt-0.5 shrink-0"></i>
+                            <span>A lack of skill for true collaboration</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-feather="alert-circle" class="h-5 w-5 text-earth mt-0.5 shrink-0"></i>
+                            <span>Decisions that are either autocratic or bogged down</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution" class="py-24 bg-surface border-t border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1 reveal">
+                    <img src="assets/seedling-on-stump2.jpg" alt="Growth from old roots" class="rounded-3xl shadow-soft border border-border w-full object-cover h-[600px]">
+                </div>
+
+                <div class="order-1 lg:order-2 reveal delay-100">
+                    <span class="text-primary font-heading font-bold tracking-wide uppercase text-sm">Our Solution</span>
+                    <h2 class="font-heading text-4xl lg:text-5xl font-bold text-ink mt-3 mb-8">Build your capacity on multiple levels</h2>
+
+                    <div class="space-y-8">
+                        <div class="flex gap-5">
+                            <div class="flex-shrink-0 h-12 w-12 rounded-2xl bg-safe border border-border flex items-center justify-center text-primary">
+                                <i data-feather="anchor" class="h-6 w-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-heading text-xl font-bold text-ink mb-2">Partner with your nervous system</h3>
+                                <p class="text-lg text-ink/80 font-body leading-relaxed">
+                                    Reliably and authentically feel curious, calm, clear-headed, and courageous even in challenging situations.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-5">
+                            <div class="flex-shrink-0 h-12 w-12 rounded-2xl bg-safe border border-border flex items-center justify-center text-primary">
+                                <i data-feather="message-circle" class="h-6 w-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-heading text-xl font-bold text-ink mb-2">Deepen communication</h3>
+                                <p class="text-lg text-ink/80 font-body leading-relaxed">
+                                    Understand how motivation and defenses work. Expand your ability to communicate beyond the limits and traps of language.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-5">
+                            <div class="flex-shrink-0 h-12 w-12 rounded-2xl bg-safe border border-border flex items-center justify-center text-primary">
+                                <i data-feather="map" class="h-6 w-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-heading text-xl font-bold text-ink mb-2">Navigate complexity</h3>
+                                <p class="text-lg text-ink/80 font-body leading-relaxed">
+                                    Gain an empowering bigger-picture understanding of our time in history and learn how cultural change actually works.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Details -->
+    <section id="program-details" class="py-24 bg-bg relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h2 class="font-heading text-4xl font-bold text-ink mb-6">Two 4-week programs</h2>
+                <p class="text-xl text-ink/80 font-body">
+                    Equipping you to build and maintain positive culture change from the inside out.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Program 1 -->
+                <article class="bg-surface rounded-3xl border border-border p-8 shadow-sm hover:shadow-soft transition-shadow reveal">
+                    <div class="inline-block px-4 py-1.5 rounded-full bg-primary-soft text-primary font-heading font-bold text-sm mb-6">
+                        Mar 2 - 28
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-ink mb-4">Program 1: Expanding Personal and Collaborative Capabilities</h3>
+                    <p class="text-ink/80 font-body mb-8 leading-relaxed">
+                        Empowers you to upgrade your personal operating system. Valuable for everyone ready to outgrow the limitations of modernist culture.
+                    </p>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center gap-3 text-ink/90">
+                            <i data-feather="key" class="h-5 w-5 text-primary"></i>
+                            <span>HumanOS Literacy</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-ink/90">
+                            <i data-feather="shield" class="h-5 w-5 text-primary"></i>
+                            <span>Savvy about Psychodynamics</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-ink/90">
+                            <i data-feather="layers" class="h-5 w-5 text-primary"></i>
+                            <span>Diverse Modes of Cognition</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-ink/90">
+                            <i data-feather="users" class="h-5 w-5 text-primary"></i>
+                            <span>Win-Win-Win Collaboration</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Program 2 -->
+                <article class="bg-surface rounded-3xl border border-border p-8 shadow-sm hover:shadow-soft transition-shadow reveal delay-100">
+                    <div class="inline-block px-4 py-1.5 rounded-full bg-safe-soft text-ink font-heading font-bold text-sm mb-6">
+                        Apr 13 - May 9
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-ink mb-4">Program 2: Co-Evolving Whole-System Organizations</h3>
+                    <p class="text-ink/80 font-body mb-8 leading-relaxed">
+                        Builds on Program 1. Equips you to co-evolve your groups and organizations by exploring how to create innovative cultures.
+                    </p>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center gap-3 text-ink/90">
+                            <i data-feather="globe" class="h-5 w-5 text-earth"></i>
+                            <span>Systems Literacy</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-ink/90">
+                            <i data-feather="sun" class="h-5 w-5 text-earth"></i>
+                            <span>Embodied Harmony</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-ink/90">
+                            <i data-feather="git-branch" class="h-5 w-5 text-earth"></i>
+                            <span>Cultural Evolution Literacy</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-ink/90">
+                            <i data-feather="zap" class="h-5 w-5 text-earth"></i>
+                            <span>Innovative Organization Design</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Process / How it works -->
+            <div class="mt-20 bg-primary-soft/30 rounded-3xl p-8 md:p-12 border border-border reveal">
+                <h3 class="font-heading text-3xl font-bold text-ink mb-8 text-center">How it Works</h3>
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="h-14 w-14 mx-auto bg-surface rounded-2xl border border-border flex items-center justify-center mb-4 text-primary shadow-sm">
+                            <i data-feather="clock" class="h-7 w-7"></i>
+                        </div>
+                        <h4 class="font-heading font-bold text-lg mb-2">Time Efficient</h4>
+                        <p class="text-sm text-ink/70">Under 45 mins reading/week. Designed to integrate into your daily life.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="h-14 w-14 mx-auto bg-surface rounded-2xl border border-border flex items-center justify-center mb-4 text-primary shadow-sm">
+                            <i data-feather="users" class="h-7 w-7"></i>
+                        </div>
+                        <h4 class="font-heading font-bold text-lg mb-2">Connection</h4>
+                        <p class="text-sm text-ink/70">Weekly triad & group meetings. Learn from each other in a safe space.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="h-14 w-14 mx-auto bg-surface rounded-2xl border border-border flex items-center justify-center mb-4 text-primary shadow-sm">
+                            <i data-feather="cpu" class="h-7 w-7"></i>
+                        </div>
+                        <h4 class="font-heading font-bold text-lg mb-2">AI Partner</h4>
+                        <p class="text-sm text-ink/70">Train your own AI assistant with program content for personalized support.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="h-14 w-14 mx-auto bg-surface rounded-2xl border border-border flex items-center justify-center mb-4 text-primary shadow-sm">
+                            <i data-feather="book-open" class="h-7 w-7"></i>
+                        </div>
+                        <div class="flex items-center justify-center gap-2 mb-2">
+                            <h4 class="font-heading font-bold text-lg">Self-Paced</h4>
+                        </div>
+                        <p class="text-sm text-ink/70">Content arrives weekly. Digest it at your own rhythm.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty Section -->
+    <section id="faculty" class="py-24 bg-surface border-t border-border">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="font-heading text-4xl font-bold text-ink mb-6">Guided by Experience</h2>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-10 items-center">
+                <div class="w-full md:w-1/3 flex justify-center md:justify-end reveal">
+                    <img src="assets/robert_gilman.jpg" alt="Robert Gilman" class="w-48 rounded-3xl shadow-soft border border-border">
+                </div>
+                <div class="w-full md:w-2/3 reveal delay-100">
+                    <h3 class="font-heading text-3xl font-bold text-ink mb-2">Robert Gilman</h3>
+                    <p class="text-primary font-bold mb-6">Evolutionary Scout & Thought Leader</p>
+                    <div class="prose text-lg text-ink/80 font-body leading-relaxed space-y-4">
+                        <p>
+                            With decades of experience synthesizing best practices for community engagement and whole-system design, Robert melds big vision with practical results.
+                        </p>
+                        <p>
+                            He received his PhD in Astrophysics from Princeton and was the founder of the award-winning journal <em>In Context</em>. He brings a remarkable level of clarity and insight to the territory of cultural evolution.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-24 bg-bg relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h2 class="font-heading text-4xl font-bold text-ink mb-6">Invest in Your Capacity</h2>
+                <p class="text-xl text-ink/80 font-body">
+                    Accessible pricing with scholarship options available.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Single Program -->
+                <div class="bg-surface rounded-3xl border border-border p-8 shadow-sm flex flex-col reveal">
+                    <div class="mb-6">
+                        <h3 class="font-heading text-2xl font-bold text-ink">Program 1 Only</h3>
+                        <p class="text-ink/60 mt-2">Expanding Personal Capabilities</p>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-4xl font-bold text-primary">$325</span>
+                            <span class="text-ink/60">Early Bird</span>
+                        </div>
+                        <p class="text-sm text-ink/50 mt-1">Regular price $375 after Jan 17</p>
+                    </div>
+
+                    <ul class="space-y-4 mb-8 flex-1">
+                        <li class="flex items-center gap-3 text-ink/80">
+                            <i data-feather="check" class="h-5 w-5 text-primary"></i>
+                            <span>4-week deep dive</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-ink/80">
+                            <i data-feather="check" class="h-5 w-5 text-primary"></i>
+                            <span>Weekly triad & group calls</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-ink/80">
+                            <i data-feather="check" class="h-5 w-5 text-primary"></i>
+                            <span>Personal AI research assistant</span>
+                        </li>
+                    </ul>
+
+                    <a href="#register" class="block w-full text-center font-heading font-semibold px-6 py-3 rounded-xl border-2 border-primary text-primary hover:bg-primary-soft transition-colors">
+                        Register for Program 1
+                    </a>
+                </div>
+
+                <!-- Bundle -->
+                <div class="bg-surface rounded-3xl border-2 border-primary/20 p-8 shadow-soft flex flex-col relative overflow-hidden reveal delay-100">
+                    <div class="absolute top-0 right-0 bg-safe text-ink/80 text-xs font-bold px-3 py-1 rounded-bl-xl uppercase tracking-wide">
+                        Best Value
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="font-heading text-2xl font-bold text-ink">Full Series Bundle</h3>
+                        <p class="text-ink/60 mt-2">Program 1 + Program 2</p>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-4xl font-bold text-primary">$600</span>
+                            <span class="text-ink/60">Early Bird</span>
+                        </div>
+                        <p class="text-sm text-ink/50 mt-1">Regular price $700 after Jan 17</p>
+                    </div>
+
+                    <ul class="space-y-4 mb-8 flex-1">
+                        <li class="flex items-center gap-3 text-ink/80">
+                            <i data-feather="check" class="h-5 w-5 text-primary"></i>
+                            <span>Complete 8-week journey</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-ink/80">
+                            <i data-feather="check" class="h-5 w-5 text-primary"></i>
+                            <span>Full systems & culture training</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-ink/80">
+                            <i data-feather="check" class="h-5 w-5 text-primary"></i>
+                            <span>Save $50 with bundle</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-ink/80">
+                            <i data-feather="check" class="h-5 w-5 text-primary"></i>
+                            <span>Money-back guarantee</span>
+                        </li>
+                    </ul>
+
+                    <a href="#register" class="block w-full text-center font-heading font-semibold px-6 py-3 rounded-xl bg-primary text-white hover:bg-primary-deep transition-colors shadow-md">
+                        Register for Bundle
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center max-w-2xl mx-auto text-ink/70 text-sm reveal">
+                <p class="mb-4">
+                    <strong>Supporting Registration:</strong> $425 (Prog 1) / $750 (Bundle). <br>
+                    Contributes to the Scholarship Fund and diversity commitment.
+                </p>
+                <p>
+                    Scholarships available. Email <a href="mailto:rgilman@context.org" class="text-primary underline">rgilman@context.org</a>.
+                    Payment plans available (up to 12 months).
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 bg-surface border-t border-border">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="font-heading text-4xl font-bold text-ink mb-12 text-center reveal">Frequently Asked Questions</h2>
+
+            <div class="space-y-6 reveal">
+                <details class="group bg-bg rounded-2xl border border-border overflow-hidden">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                        <span class="font-heading font-bold text-lg text-ink">What is the time commitment?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i data-feather="chevron-down" class="text-primary"></i>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-lg text-ink/80 font-body leading-relaxed">
+                        The program is designed to be efficient. Expect under 45 minutes of reading per week, plus two meetings (one triad, one group). Experiential activities are designed to integrate into your daily life.
+                    </div>
+                </details>
+
+                <details class="group bg-bg rounded-2xl border border-border overflow-hidden">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                        <span class="font-heading font-bold text-lg text-ink">Can I change my mind after registering?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i data-feather="chevron-down" class="text-primary"></i>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-lg text-ink/80 font-body leading-relaxed">
+                        Yes. There is a full money-back guarantee through the first week of each program. If you register for the bundle and drop Program 2, you'll be refunded the difference.
+                    </div>
+                </details>
+
+                <details class="group bg-bg rounded-2xl border border-border overflow-hidden">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                        <span class="font-heading font-bold text-lg text-ink">Is this open to people outside the network?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i data-feather="chevron-down" class="text-primary"></i>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-lg text-ink/80 font-body leading-relaxed">
+                        Absolutely. We welcome everyone. While initial publicity is within the network, the content is designed for anyone ready to build these capacities.
+                    </div>
+                </details>
+
+                <details class="group bg-bg rounded-2xl border border-border overflow-hidden">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                        <span class="font-heading font-bold text-lg text-ink">What if I can only take Program 1 now?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i data-feather="chevron-down" class="text-primary"></i>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-lg text-ink/80 font-body leading-relaxed">
+                        That's perfectly fine. Program 1 is a complete experience on its own. You can take Program 2 in a future cycle if you wish.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section id="register" class="py-24 bg-primary text-white text-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[url('assets/spiral-stained-glass2.jpg')] bg-cover bg-center mix-blend-overlay"></div>
+        <div class="max-w-4xl mx-auto px-4 relative z-10 reveal">
+            <h2 class="font-heading text-4xl md:text-5xl font-bold mb-6">Ready to navigate with clarity?</h2>
+            <p class="text-xl text-white/80 font-body mb-10 max-w-2xl mx-auto">
+                Join us to build the capacities that matter most for our future.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://www.context.org/engage/registration-for-essential-capacities/" class="inline-flex justify-center items-center font-heading font-bold px-8 py-4 rounded-xl bg-safe text-ink hover:bg-safe-deep transition-colors shadow-lg">
+                    Register Now
+                </a>
+                <a href="#faq" class="inline-flex justify-center items-center font-heading font-bold px-8 py-4 rounded-xl border border-white/30 text-white hover:bg-white/10 transition-colors">
+                    Have Questions?
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-bg border-t border-border pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
+                <div class="flex items-center gap-3">
+                    <img src="assets/cilogoL.svg" alt="Context Institute" class="h-8 w-auto opacity-80">
+                    <span class="font-heading font-bold text-ink/80">Context Institute</span>
+                </div>
+                <div class="flex gap-8 text-sm font-heading font-semibold text-ink/60">
+                    <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+                    <a href="mailto:rgilman@context.org" class="hover:text-primary transition-colors">Contact</a>
+                </div>
+            </div>
+            <div class="text-center text-xs text-ink/40 font-body">
+                &copy; 2026 Context Institute. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Feather Icons
+        feather.replace();
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth Scroll Reveal
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealOnScroll = () => {
+            const windowHeight = window.innerHeight;
+            const elementVisible = 100;
+
+            revealElements.forEach((reveal) => {
+                const elementTop = reveal.getBoundingClientRect().top;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveal.classList.add('active');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        // Trigger once on load
+        revealOnScroll();
+    </script>
+</body>
+</html>
