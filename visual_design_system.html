@@ -49,8 +49,8 @@
         font-family: "Nunito Sans", sans-serif; /* Body is Sans */
         background: var(--color-bg);
         color: var(--color-ink);
-        font-size: 1.125rem; /* 18px base */
-        line-height: 1.6;
+        font-size: 1.25rem; /* Increased to 20px base for better readability */
+        line-height: 1.7; /* Increased line height for larger text */
       }
 
       h1,
@@ -61,7 +61,7 @@
       h6,
       .font-heading {
         font-family: "Lora", serif; /* Headings are Serif */
-        line-height: 1.2;
+        line-height: 1.3; /* Slightly looser heading line height */
         letter-spacing: -0.01em;
       }
 
@@ -191,12 +191,13 @@
         </div>
       </div>
 
-      <nav class="mt-10" aria-label="Design system navigation">
-        <ul class="space-y-3 text-[0.95rem] font-body">
+        <nav class="mt-10" aria-label="Design system navigation">
+        <ul class="space-y-4 text-[1.05rem] font-body">
           <li><a href="#introduction" class="font-semibold text-ink hover:text-primary transition-colors">Introduction</a></li>
           <li><a href="#principles" class="font-semibold text-ink hover:text-primary transition-colors">Design Principles</a></li>
           <li><a href="#brand-essence" class="font-semibold text-ink hover:text-primary transition-colors">Brand Essence</a></li>
           <li><a href="#typography" class="font-semibold text-ink hover:text-primary transition-colors">Typography & Formatting</a></li>
+          <li><a href="#readability" class="font-semibold text-ink hover:text-primary transition-colors">Readability & Accessibility</a></li>
           <li><a href="#colors" class="font-semibold text-ink hover:text-primary transition-colors">Color Palette</a></li>
           <li><a href="#spacing" class="font-semibold text-ink hover:text-primary transition-colors">Spacing System</a></li>
           <li><a href="#assets" class="font-semibold text-ink hover:text-primary transition-colors">Visual Assets & Imagery</a></li>
@@ -329,14 +330,14 @@
               <h3 class="font-heading font-bold text-2xl">Body — Nunito Sans</h3>
               <p class="mt-2 text-sm font-mono text-ink/60">font-body (Sans)</p>
               <div class="mt-5 p-5 rounded-2xl bg-bg border border-border">
-                <p class="text-lg text-ink/90 font-body leading-relaxed">
-                  This paragraph demonstrates the default reading style. We use a base size of <strong>18px</strong> (1.125rem) with a line-height of <strong>1.6</strong> to ensure comfortable reading flow.
+                <p class="text-xl text-ink/90 font-body leading-relaxed">
+                  This paragraph demonstrates the default reading style. We use a base size of <strong>20px</strong> (1.25rem) with a line-height of <strong>1.7</strong> to ensure comfortable reading flow.
                 </p>
-                <p class="mt-4 font-body">
+                <p class="mt-4 text-lg font-body">
                   Formatting includes <strong>bold for emphasis</strong>, <em>italics for nuance</em>, and <a href="#" class="text-primary underline underline-offset-2">links for navigation</a>.
                 </p>
-                <p class="mt-4 text-sm text-ink/70 font-body">
-                  Small text (14px) is used sparingly for captions or secondary information.
+                <p class="mt-4 text-base text-ink/70 font-body">
+                  Small text (16px) is used sparingly for captions or secondary information.
                 </p>
               </div>
             </div>
@@ -346,27 +347,73 @@
           <h3 class="text-2xl font-heading font-bold mb-4">Live Content Example</h3>
           <div class="ds-card p-8 md:p-12 bg-surface border border-border">
             <article class="prose-example">
-              <h1 class="font-heading text-4xl md:text-5xl font-bold text-ink mb-6">The Practice of Integration</h1>
-              <p class="text-xl text-ink/80 font-body leading-relaxed mb-8">
+              <h1 class="font-heading text-5xl md:text-6xl font-bold text-ink mb-8">The Practice of Integration</h1>
+              <p class="text-2xl text-ink/80 font-body leading-relaxed mb-8">
                 In a world that often demands fragmentation, the act of integrating our experiences becomes a radical practice of wholeness.
               </p>
 
-              <h2 class="font-heading text-3xl font-bold text-ink mb-4">Why We Need Grounding</h2>
-              <p class="text-lg text-ink font-body leading-relaxed">
+              <h2 class="font-heading text-4xl font-bold text-ink mb-6">Why We Need Grounding</h2>
+              <p class="text-xl text-ink font-body leading-relaxed">
                 Grounding is not about stopping movement; it is about finding a stable center from which movement can flow. When we are grounded, we can meet complexity without losing our sense of self. This capacity is essential for navigating the modern landscape.
               </p>
 
-              <blockquote class="my-8 border-l-4 border-primary pl-6 py-2 italic text-xl md:text-2xl text-ink/90 font-heading bg-primary-soft/30 rounded-r-lg">
+              <blockquote class="my-10 border-l-4 border-primary pl-8 py-4 italic text-2xl md:text-3xl text-ink/90 font-heading bg-primary-soft/30 rounded-r-xl leading-relaxed">
                 “To be grounded is to be in relationship with reality as it is, not as we fear it to be.”
               </blockquote>
 
-              <h3 class="font-heading text-2xl font-bold text-ink mb-3">Core Benefits</h3>
-              <ul class="text-lg text-ink font-body leading-relaxed list-disc pl-5 space-y-2">
+              <h3 class="font-heading text-3xl font-bold text-ink mb-4">Core Benefits</h3>
+              <ul class="text-xl text-ink font-body leading-relaxed list-disc pl-6 space-y-3">
                 <li><strong>Reduced Reactivity:</strong> A pause between stimulus and response.</li>
                 <li><strong>Increased Clarity:</strong> Seeing the signal amidst the noise.</li>
                 <li><strong>Sustainable Energy:</strong> Moving from a place of rest rather than adrenaline.</li>
               </ul>
             </article>
+          </div>
+        </section>
+
+        <!-- READABILITY & ACCESSIBILITY -->
+        <section id="readability" class="mb-16">
+          <h2 class="text-4xl font-heading font-bold mb-6">Readability & Accessibility</h2>
+          <p class="text-ink/80 mb-8 font-body text-lg">
+            Our commitment to "Grounded Clarity" means ensuring content is accessible to all readers.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="ds-card p-6">
+              <h3 class="font-heading font-bold text-xl mb-4">Minimum Sizes</h3>
+              <ul class="space-y-3 text-ink/80 font-body">
+                <li class="flex items-start gap-3">
+                  <i data-feather="check-circle" class="h-5 w-5 text-emerald-600 mt-0.5 shrink-0"></i>
+                  <span><strong>Body Text:</strong> Minimum 20px (1.25rem) for main content.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i data-feather="check-circle" class="h-5 w-5 text-emerald-600 mt-0.5 shrink-0"></i>
+                  <span><strong>Secondary Text:</strong> Minimum 16px (1rem). Avoid 14px except for very minor labels.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i data-feather="check-circle" class="h-5 w-5 text-emerald-600 mt-0.5 shrink-0"></i>
+                  <span><strong>Line Height:</strong> 1.6 to 1.7 for body text to prevent crowding.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="ds-card p-6">
+              <h3 class="font-heading font-bold text-xl mb-4">Contrast & Spacing</h3>
+              <ul class="space-y-3 text-ink/80 font-body">
+                <li class="flex items-start gap-3">
+                  <i data-feather="check-circle" class="h-5 w-5 text-emerald-600 mt-0.5 shrink-0"></i>
+                  <span><strong>Contrast:</strong> All text meets WCAG AA standards (4.5:1 ratio).</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i data-feather="check-circle" class="h-5 w-5 text-emerald-600 mt-0.5 shrink-0"></i>
+                  <span><strong>Line Length:</strong> Max 65-75 characters per line for comfortable scanning.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i data-feather="check-circle" class="h-5 w-5 text-emerald-600 mt-0.5 shrink-0"></i>
+                  <span><strong>Paragraph Spacing:</strong> Generous margins (1.5em) to separate ideas.</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
 
@@ -859,7 +906,7 @@
           <div class="grid md:grid-cols-3 gap-6">
             <div class="ds-card p-6">
               <h3 class="font-heading font-bold text-xl">Landing Page</h3>
-              <ul class="mt-3 space-y-2 text-ink/80 text-sm font-body">
+              <ul class="mt-3 space-y-2 text-ink/80 text-base font-body">
                 <li>• Hero: metaphorical image + calm headline</li>
                 <li>• One primary CTA; secondary as outline/ghost</li>
                 <li>• Sections feel like “chapters” with breathing room</li>
@@ -867,7 +914,7 @@
             </div>
             <div class="ds-card p-6">
               <h3 class="font-heading font-bold text-xl">Email</h3>
-              <ul class="mt-3 space-y-2 text-ink/80 text-sm font-body">
+              <ul class="mt-3 space-y-2 text-ink/80 text-base font-body">
                 <li>• Single column, generous padding</li>
                 <li>• Keep imagery minimal; prioritize readability</li>
                 <li>• Same CTA hierarchy as web</li>
@@ -875,7 +922,7 @@
             </div>
             <div class="ds-card p-6">
               <h3 class="font-heading font-bold text-xl">PDF / Program Overview</h3>
-              <ul class="mt-3 space-y-2 text-ink/80 text-sm font-body">
+              <ul class="mt-3 space-y-2 text-ink/80 text-base font-body">
                 <li>• Serif body supports long reading</li>
                 <li>• Use safe backgrounds for callouts</li>
                 <li>• Maintain margins and calm rhythm</li>
