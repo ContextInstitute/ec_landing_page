@@ -49,6 +49,11 @@
     </script>
 
     <style>
+        body {
+            font-size: 1.25rem;
+            line-height: 1.7;
+        }
+
         /* Custom Utilities */
         .text-balance { text-wrap: balance; }
 
@@ -71,27 +76,27 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center gap-3">
-                    <img src="assets/cilogoL.svg" alt="Context Institute" class="h-8 w-auto">
+                <div class="flex-shrink-0 flex items-center gap-4">
+                    <img src="assets/cilogoL.svg" alt="Context Institute" class="h-10 w-auto">
                     <div class="hidden md:block leading-tight">
-                        <p class="font-heading font-bold text-ink text-lg">Essential Capacities</p>
+                        <p class="font-body font-bold text-ink text-xl tracking-tight">Essential Capacities</p>
                     </div>
                 </div>
 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#problem" class="font-heading font-semibold text-ink/80 hover:text-primary transition-colors">The Challenge</a>
-                    <a href="#solution" class="font-heading font-semibold text-ink/80 hover:text-primary transition-colors">The Program</a>
-                    <a href="#faculty" class="font-heading font-semibold text-ink/80 hover:text-primary transition-colors">Faculty</a>
-                    <a href="#pricing" class="font-heading font-semibold text-ink/80 hover:text-primary transition-colors">Pricing</a>
-                    <a href="#faq" class="font-heading font-semibold text-ink/80 hover:text-primary transition-colors">FAQ</a>
-                    <a href="#register" class="font-heading font-semibold px-5 py-2.5 rounded-xl bg-primary text-white hover:bg-primary-deep transition-colors shadow-sm hover:shadow-md">
+                <div class="hidden lg:flex items-center space-x-2 xl:space-x-4">
+                    <a href="#problem" class="font-body font-semibold px-3 py-2 text-base rounded-xl border border-primary/20 text-ink/80 hover:border-primary hover:text-primary transition-all">The Challenge</a>
+                    <a href="#solution" class="font-body font-semibold px-3 py-2 text-base rounded-xl border border-primary/20 text-ink/80 hover:border-primary hover:text-primary transition-all">The Program</a>
+                    <a href="#faculty" class="font-body font-semibold px-3 py-2 text-base rounded-xl border border-primary/20 text-ink/80 hover:border-primary hover:text-primary transition-all">Faculty</a>
+                    <a href="#pricing" class="font-body font-semibold px-3 py-2 text-base rounded-xl border border-primary/20 text-ink/80 hover:border-primary hover:text-primary transition-all">Pricing</a>
+                    <a href="#faq" class="font-body font-semibold px-3 py-2 text-base rounded-xl border border-primary/20 text-ink/80 hover:border-primary hover:text-primary transition-all">FAQ</a>
+                    <a href="#register" class="font-body font-semibold px-4 py-2.5 text-base rounded-xl bg-primary text-white hover:bg-primary-deep transition-colors shadow-sm hover:shadow-md">
                         Register Now
                     </a>
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <div class="md:hidden flex items-center">
+                <div class="lg:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-ink hover:text-primary p-2">
                         <i data-feather="menu" class="h-6 w-6"></i>
                     </button>
@@ -100,7 +105,7 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-surface border-b border-border absolute w-full">
+        <div id="mobile-menu" class="hidden lg:hidden bg-surface border-b border-border absolute w-full">
             <div class="px-4 pt-2 pb-6 space-y-2 shadow-soft">
                 <a href="#problem" class="block px-3 py-2 rounded-lg text-base font-heading font-semibold text-ink hover:bg-safe-soft hover:text-primary">The Challenge</a>
                 <a href="#solution" class="block px-3 py-2 rounded-lg text-base font-heading font-semibold text-ink hover:bg-safe-soft hover:text-primary">The Program</a>
@@ -128,7 +133,7 @@
                     <h1 class="font-heading text-5xl lg:text-6xl font-bold text-ink leading-[1.1] mb-6 text-balance">
                         Discover a better way to navigate our turbulent times
                     </h1>
-                    <p class="text-xl text-ink/80 font-body leading-relaxed mb-8 max-w-lg">
+                    <p class="text-xl lg:text-2xl text-ink/80 font-body leading-relaxed mb-8 max-w-2xl">
                         Develop game-changing foundational capacities and use them to transform <em>your</em> challenges, be they personal, organizational or global.
                     </p>
 
@@ -150,11 +155,17 @@
 
                 <div class="relative reveal delay-200">
                     <div class="relative rounded-3xl overflow-hidden shadow-soft border border-border bg-surface aspect-[4/3] flex items-center justify-center group">
-                        <!-- Placeholder for Gyroscope Animation -->
+                        <!-- Gyroscope SVG -->
                         <img src="assets/water-boys2.jpg" alt="Metaphorical representation of balance and flow" class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
-                        <div class="relative z-10 bg-surface/90 backdrop-blur p-6 rounded-2xl shadow-lg max-w-xs text-center border border-border">
-                            <i data-feather="activity" class="h-8 w-8 text-primary mx-auto mb-3"></i>
+                        <div class="absolute inset-0 bg-primary/5 mix-blend-multiply"></div>
+                        <div class="relative z-10 bg-surface/40 backdrop-blur-sm p-6 rounded-2xl shadow-lg max-w-xs text-center border border-white/30">
+                            <svg viewBox="0 0 24 24" class="h-12 w-12 text-primary mx-auto mb-3 animate-[spin_10s_linear_infinite]" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 2v20M2 12h20"></path>
+                                <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(45 12 12)"></ellipse>
+                                <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(-45 12 12)"></ellipse>
+                                <circle cx="12" cy="12" r="2" fill="currentColor"></circle>
+                            </svg>
                             <p class="font-heading font-bold text-lg text-primary">From Wobble to Spin</p>
                             <p class="text-sm text-ink/70 mt-1">Find your stable center amidst the movement.</p>
                         </div>
@@ -179,7 +190,7 @@
                             <p class="text-xs text-ink/60 uppercase tracking-wide">Alumni</p>
                         </div>
                     </div>
-                    <p class="text-lg text-ink/80 italic font-body leading-relaxed">
+                    <p class="text-xl text-ink/80 italic font-body leading-relaxed">
                         “The Essential Capacities Programs offer tools, practices, and experiences that have helped me to find inner peace (amongst the chaos)... The 7 Keys are like giving people the missing manual for how to work together effectively.”
                     </p>
                 </div>
@@ -193,7 +204,7 @@
                             <p class="text-xs text-ink/60 uppercase tracking-wide">Alumni</p>
                         </div>
                     </div>
-                    <p class="text-lg text-ink/80 italic font-body leading-relaxed">
+                    <p class="text-xl text-ink/80 italic font-body leading-relaxed">
                         “I feel like a ship that understands the coordinates of my destination and has the navigation capability to chart a course... I’ve gained a level of inner calm that’s been hard to find in our current turbulent times.”
                     </p>
                 </div>
@@ -207,7 +218,7 @@
                             <p class="text-xs text-ink/60 uppercase tracking-wide">Alumni</p>
                         </div>
                     </div>
-                    <p class="text-lg text-ink/80 italic font-body leading-relaxed">
+                    <p class="text-xl text-ink/80 italic font-body leading-relaxed">
                         “The Seven Keys provided a pathway to connect my current projects to a higher meaning — a north star of why I’m motivated to do this work and how to share it with others.”
                     </p>
                 </div>
@@ -229,23 +240,23 @@
                         <div class="p-3 bg-earth-soft/30 rounded-xl text-earth-deep">
                             <i data-feather="cloud-rain" class="h-6 w-6"></i>
                         </div>
-                        <h3 class="font-heading text-2xl font-bold text-ink">Are you feeling...</h3>
+                        <h3 class="font-heading text-3xl font-bold text-ink">Are you feeling...</h3>
                     </div>
-                    <ul class="space-y-4 text-ink/80 font-body">
+                    <ul class="space-y-4 text-ink/80 font-body text-xl">
                         <li class="flex items-start gap-3">
-                            <i data-feather="x" class="h-5 w-5 text-earth mt-0.5 shrink-0"></i>
+                            <i data-feather="x" class="h-5 w-5 text-earth mt-1.5 shrink-0"></i>
                             <span>Overwhelmed and disconnected from who you really are</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <i data-feather="x" class="h-5 w-5 text-earth mt-0.5 shrink-0"></i>
+                            <i data-feather="x" class="h-5 w-5 text-earth mt-1.5 shrink-0"></i>
                             <span>Trapped in old habits and reactions</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <i data-feather="x" class="h-5 w-5 text-earth mt-0.5 shrink-0"></i>
+                            <i data-feather="x" class="h-5 w-5 text-earth mt-1.5 shrink-0"></i>
                             <span>Uncertain how to navigate through all the uncertainty</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <i data-feather="x" class="h-5 w-5 text-earth mt-0.5 shrink-0"></i>
+                            <i data-feather="x" class="h-5 w-5 text-earth mt-1.5 shrink-0"></i>
                             <span>Anxious for your future and grief at what's being lost</span>
                         </li>
                     </ul>
@@ -256,23 +267,23 @@
                         <div class="p-3 bg-earth-soft/30 rounded-xl text-earth-deep">
                             <i data-feather="users" class="h-6 w-6"></i>
                         </div>
-                        <h3 class="font-heading text-2xl font-bold text-ink">In your groups...</h3>
+                        <h3 class="font-heading text-3xl font-bold text-ink">In your groups...</h3>
                     </div>
-                    <ul class="space-y-4 text-ink/80 font-body">
+                    <ul class="space-y-4 text-ink/80 font-body text-xl">
                         <li class="flex items-start gap-3">
-                            <i data-feather="alert-circle" class="h-5 w-5 text-earth mt-0.5 shrink-0"></i>
+                            <i data-feather="alert-circle" class="h-5 w-5 text-earth mt-1.5 shrink-0"></i>
                             <span>Misunderstandings and responding to reactivity in others</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <i data-feather="alert-circle" class="h-5 w-5 text-earth mt-0.5 shrink-0"></i>
+                            <i data-feather="alert-circle" class="h-5 w-5 text-earth mt-1.5 shrink-0"></i>
                             <span>Rigidity where there needs to be creativity</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <i data-feather="alert-circle" class="h-5 w-5 text-earth mt-0.5 shrink-0"></i>
+                            <i data-feather="alert-circle" class="h-5 w-5 text-earth mt-1.5 shrink-0"></i>
                             <span>A lack of skill for true collaboration</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <i data-feather="alert-circle" class="h-5 w-5 text-earth mt-0.5 shrink-0"></i>
+                            <i data-feather="alert-circle" class="h-5 w-5 text-earth mt-1.5 shrink-0"></i>
                             <span>Decisions that are either autocratic or bogged down</span>
                         </li>
                     </ul>
@@ -299,8 +310,8 @@
                                 <i data-feather="anchor" class="h-6 w-6"></i>
                             </div>
                             <div>
-                                <h3 class="font-heading text-xl font-bold text-ink mb-2">Partner with your nervous system</h3>
-                                <p class="text-lg text-ink/80 font-body leading-relaxed">
+                                <h3 class="font-heading text-2xl font-bold text-ink mb-2">Partner with your nervous system</h3>
+                                <p class="text-xl text-ink/80 font-body leading-relaxed">
                                     Reliably and authentically feel curious, calm, clear-headed, and courageous even in challenging situations.
                                 </p>
                             </div>
@@ -311,8 +322,8 @@
                                 <i data-feather="message-circle" class="h-6 w-6"></i>
                             </div>
                             <div>
-                                <h3 class="font-heading text-xl font-bold text-ink mb-2">Deepen communication</h3>
-                                <p class="text-lg text-ink/80 font-body leading-relaxed">
+                                <h3 class="font-heading text-2xl font-bold text-ink mb-2">Deepen communication</h3>
+                                <p class="text-xl text-ink/80 font-body leading-relaxed">
                                     Understand how motivation and defenses work. Expand your ability to communicate beyond the limits and traps of language.
                                 </p>
                             </div>
@@ -323,8 +334,8 @@
                                 <i data-feather="map" class="h-6 w-6"></i>
                             </div>
                             <div>
-                                <h3 class="font-heading text-xl font-bold text-ink mb-2">Navigate complexity</h3>
-                                <p class="text-lg text-ink/80 font-body leading-relaxed">
+                                <h3 class="font-heading text-2xl font-bold text-ink mb-2">Navigate complexity</h3>
+                                <p class="text-xl text-ink/80 font-body leading-relaxed">
                                     Gain an empowering bigger-picture understanding of our time in history and learn how cultural change actually works.
                                 </p>
                             </div>
@@ -351,26 +362,26 @@
                     <div class="inline-block px-4 py-1.5 rounded-full bg-primary-soft text-primary font-heading font-bold text-sm mb-6">
                         Mar 2 - 28
                     </div>
-                    <h3 class="font-heading text-2xl font-bold text-ink mb-4">Program 1: Expanding Personal and Collaborative Capabilities</h3>
-                    <p class="text-ink/80 font-body mb-8 leading-relaxed">
+                    <h3 class="font-heading text-3xl font-bold text-ink mb-4">Program 1: Expanding Personal and Collaborative Capabilities</h3>
+                    <p class="text-xl text-ink/80 font-body mb-8 leading-relaxed">
                         Empowers you to upgrade your personal operating system. Valuable for everyone ready to outgrow the limitations of modernist culture.
                     </p>
 
                     <div class="space-y-4 mb-8">
-                        <div class="flex items-center gap-3 text-ink/90">
-                            <i data-feather="key" class="h-5 w-5 text-primary"></i>
+                        <div class="flex items-center gap-3 text-ink/90 text-xl">
+                            <i data-feather="key" class="h-6 w-6 text-primary"></i>
                             <span>HumanOS Literacy</span>
                         </div>
-                        <div class="flex items-center gap-3 text-ink/90">
-                            <i data-feather="shield" class="h-5 w-5 text-primary"></i>
+                        <div class="flex items-center gap-3 text-ink/90 text-xl">
+                            <i data-feather="shield" class="h-6 w-6 text-primary"></i>
                             <span>Savvy about Psychodynamics</span>
                         </div>
-                        <div class="flex items-center gap-3 text-ink/90">
-                            <i data-feather="layers" class="h-5 w-5 text-primary"></i>
+                        <div class="flex items-center gap-3 text-ink/90 text-xl">
+                            <i data-feather="layers" class="h-6 w-6 text-primary"></i>
                             <span>Diverse Modes of Cognition</span>
                         </div>
-                        <div class="flex items-center gap-3 text-ink/90">
-                            <i data-feather="users" class="h-5 w-5 text-primary"></i>
+                        <div class="flex items-center gap-3 text-ink/90 text-xl">
+                            <i data-feather="users" class="h-6 w-6 text-primary"></i>
                             <span>Win-Win-Win Collaboration</span>
                         </div>
                     </div>
@@ -381,26 +392,26 @@
                     <div class="inline-block px-4 py-1.5 rounded-full bg-safe-soft text-ink font-heading font-bold text-sm mb-6">
                         Apr 13 - May 9
                     </div>
-                    <h3 class="font-heading text-2xl font-bold text-ink mb-4">Program 2: Co-Evolving Whole-System Organizations</h3>
-                    <p class="text-ink/80 font-body mb-8 leading-relaxed">
+                    <h3 class="font-heading text-3xl font-bold text-ink mb-4">Program 2: Co-Evolving Whole-System Organizations</h3>
+                    <p class="text-xl text-ink/80 font-body mb-8 leading-relaxed">
                         Builds on Program 1. Equips you to co-evolve your groups and organizations by exploring how to create innovative cultures.
                     </p>
 
                     <div class="space-y-4 mb-8">
-                        <div class="flex items-center gap-3 text-ink/90">
-                            <i data-feather="globe" class="h-5 w-5 text-earth"></i>
+                        <div class="flex items-center gap-3 text-ink/90 text-xl">
+                            <i data-feather="globe" class="h-6 w-6 text-earth"></i>
                             <span>Systems Literacy</span>
                         </div>
-                        <div class="flex items-center gap-3 text-ink/90">
-                            <i data-feather="sun" class="h-5 w-5 text-earth"></i>
+                        <div class="flex items-center gap-3 text-ink/90 text-xl">
+                            <i data-feather="sun" class="h-6 w-6 text-earth"></i>
                             <span>Embodied Harmony</span>
                         </div>
-                        <div class="flex items-center gap-3 text-ink/90">
-                            <i data-feather="git-branch" class="h-5 w-5 text-earth"></i>
+                        <div class="flex items-center gap-3 text-ink/90 text-xl">
+                            <i data-feather="git-branch" class="h-6 w-6 text-earth"></i>
                             <span>Cultural Evolution Literacy</span>
                         </div>
-                        <div class="flex items-center gap-3 text-ink/90">
-                            <i data-feather="zap" class="h-5 w-5 text-earth"></i>
+                        <div class="flex items-center gap-3 text-ink/90 text-xl">
+                            <i data-feather="zap" class="h-6 w-6 text-earth"></i>
                             <span>Innovative Organization Design</span>
                         </div>
                     </div>
@@ -409,37 +420,37 @@
 
             <!-- Process / How it works -->
             <div class="mt-20 bg-primary-soft/30 rounded-3xl p-8 md:p-12 border border-border reveal">
-                <h3 class="font-heading text-3xl font-bold text-ink mb-8 text-center">How it Works</h3>
+                <h3 class="font-heading text-4xl font-bold text-ink mb-10 text-center">How it Works</h3>
                 <div class="grid md:grid-cols-4 gap-8">
                     <div class="text-center">
-                        <div class="h-14 w-14 mx-auto bg-surface rounded-2xl border border-border flex items-center justify-center mb-4 text-primary shadow-sm">
-                            <i data-feather="clock" class="h-7 w-7"></i>
+                        <div class="h-16 w-16 mx-auto bg-surface rounded-2xl border border-border flex items-center justify-center mb-5 text-primary shadow-sm">
+                            <i data-feather="clock" class="h-8 w-8"></i>
                         </div>
-                        <h4 class="font-heading font-bold text-lg mb-2">Time Efficient</h4>
-                        <p class="text-sm text-ink/70">Under 45 mins reading/week. Designed to integrate into your daily life.</p>
+                        <h4 class="font-heading font-bold text-xl mb-3">Time Efficient</h4>
+                        <p class="text-lg text-ink/70">Under 45 mins reading/week. Designed to integrate into your daily life.</p>
                     </div>
                     <div class="text-center">
-                        <div class="h-14 w-14 mx-auto bg-surface rounded-2xl border border-border flex items-center justify-center mb-4 text-primary shadow-sm">
-                            <i data-feather="users" class="h-7 w-7"></i>
+                        <div class="h-16 w-16 mx-auto bg-surface rounded-2xl border border-border flex items-center justify-center mb-5 text-primary shadow-sm">
+                            <i data-feather="users" class="h-8 w-8"></i>
                         </div>
-                        <h4 class="font-heading font-bold text-lg mb-2">Connection</h4>
-                        <p class="text-sm text-ink/70">Weekly triad & group meetings. Learn from each other in a safe space.</p>
+                        <h4 class="font-heading font-bold text-xl mb-3">Connection</h4>
+                        <p class="text-lg text-ink/70">Weekly triad & group meetings. Learn from each other in a safe space.</p>
                     </div>
                     <div class="text-center">
-                        <div class="h-14 w-14 mx-auto bg-surface rounded-2xl border border-border flex items-center justify-center mb-4 text-primary shadow-sm">
-                            <i data-feather="cpu" class="h-7 w-7"></i>
+                        <div class="h-16 w-16 mx-auto bg-surface rounded-2xl border border-border flex items-center justify-center mb-5 text-primary shadow-sm">
+                            <i data-feather="cpu" class="h-8 w-8"></i>
                         </div>
-                        <h4 class="font-heading font-bold text-lg mb-2">AI Partner</h4>
-                        <p class="text-sm text-ink/70">Train your own AI assistant with program content for personalized support.</p>
+                        <h4 class="font-heading font-bold text-xl mb-3">AI Partner</h4>
+                        <p class="text-lg text-ink/70">Train your own AI assistant with program content for personalized support.</p>
                     </div>
                     <div class="text-center">
-                        <div class="h-14 w-14 mx-auto bg-surface rounded-2xl border border-border flex items-center justify-center mb-4 text-primary shadow-sm">
-                            <i data-feather="book-open" class="h-7 w-7"></i>
+                        <div class="h-16 w-16 mx-auto bg-surface rounded-2xl border border-border flex items-center justify-center mb-5 text-primary shadow-sm">
+                            <i data-feather="book-open" class="h-8 w-8"></i>
                         </div>
-                        <div class="flex items-center justify-center gap-2 mb-2">
-                            <h4 class="font-heading font-bold text-lg">Self-Paced</h4>
+                        <div class="flex items-center justify-center gap-2 mb-3">
+                            <h4 class="font-heading font-bold text-xl">Self-Paced</h4>
                         </div>
-                        <p class="text-sm text-ink/70">Content arrives weekly. Digest it at your own rhythm.</p>
+                        <p class="text-lg text-ink/70">Content arrives weekly. Digest it at your own rhythm.</p>
                     </div>
                 </div>
             </div>
@@ -460,7 +471,7 @@
                 <div class="w-full md:w-2/3 reveal delay-100">
                     <h3 class="font-heading text-3xl font-bold text-ink mb-2">Robert Gilman</h3>
                     <p class="text-primary font-bold mb-6">Evolutionary Scout & Thought Leader</p>
-                    <div class="prose text-lg text-ink/80 font-body leading-relaxed space-y-4">
+                    <div class="prose text-xl text-ink/80 font-body leading-relaxed space-y-4">
                         <p>
                             With decades of experience synthesizing best practices for community engagement and whole-system design, Robert melds big vision with practical results.
                         </p>
@@ -487,29 +498,29 @@
                 <!-- Single Program -->
                 <div class="bg-surface rounded-3xl border border-border p-8 shadow-sm flex flex-col reveal">
                     <div class="mb-6">
-                        <h3 class="font-heading text-2xl font-bold text-ink">Program 1 Only</h3>
-                        <p class="text-ink/60 mt-2">Expanding Personal Capabilities</p>
+                        <h3 class="font-heading text-3xl font-bold text-ink">Program 1 Only</h3>
+                        <p class="text-xl text-ink/60 mt-2">Expanding Personal Capabilities</p>
                     </div>
 
                     <div class="mb-8">
                         <div class="flex items-baseline gap-2">
-                            <span class="text-4xl font-bold text-primary">$325</span>
-                            <span class="text-ink/60">Early Bird</span>
+                            <span class="text-5xl font-bold text-primary">$325</span>
+                            <span class="text-xl text-ink/60">Early Bird</span>
                         </div>
-                        <p class="text-sm text-ink/50 mt-1">Regular price $375 after Jan 17</p>
+                        <p class="text-base text-ink/50 mt-1">Regular price $375 after Jan 17</p>
                     </div>
 
                     <ul class="space-y-4 mb-8 flex-1">
-                        <li class="flex items-center gap-3 text-ink/80">
-                            <i data-feather="check" class="h-5 w-5 text-primary"></i>
+                        <li class="flex items-center gap-3 text-ink/80 text-xl">
+                            <i data-feather="check" class="h-6 w-6 text-primary"></i>
                             <span>4-week deep dive</span>
                         </li>
-                        <li class="flex items-center gap-3 text-ink/80">
-                            <i data-feather="check" class="h-5 w-5 text-primary"></i>
+                        <li class="flex items-center gap-3 text-ink/80 text-xl">
+                            <i data-feather="check" class="h-6 w-6 text-primary"></i>
                             <span>Weekly triad & group calls</span>
                         </li>
-                        <li class="flex items-center gap-3 text-ink/80">
-                            <i data-feather="check" class="h-5 w-5 text-primary"></i>
+                        <li class="flex items-center gap-3 text-ink/80 text-xl">
+                            <i data-feather="check" class="h-6 w-6 text-primary"></i>
                             <span>Personal AI research assistant</span>
                         </li>
                     </ul>
@@ -526,33 +537,33 @@
                     </div>
 
                     <div class="mb-6">
-                        <h3 class="font-heading text-2xl font-bold text-ink">Full Series Bundle</h3>
-                        <p class="text-ink/60 mt-2">Program 1 + Program 2</p>
+                        <h3 class="font-heading text-3xl font-bold text-ink">Full Series Bundle</h3>
+                        <p class="text-xl text-ink/60 mt-2">Program 1 + Program 2</p>
                     </div>
 
                     <div class="mb-8">
                         <div class="flex items-baseline gap-2">
-                            <span class="text-4xl font-bold text-primary">$600</span>
-                            <span class="text-ink/60">Early Bird</span>
+                            <span class="text-5xl font-bold text-primary">$600</span>
+                            <span class="text-xl text-ink/60">Early Bird</span>
                         </div>
-                        <p class="text-sm text-ink/50 mt-1">Regular price $700 after Jan 17</p>
+                        <p class="text-base text-ink/50 mt-1">Regular price $700 after Jan 17</p>
                     </div>
 
                     <ul class="space-y-4 mb-8 flex-1">
-                        <li class="flex items-center gap-3 text-ink/80">
-                            <i data-feather="check" class="h-5 w-5 text-primary"></i>
+                        <li class="flex items-center gap-3 text-ink/80 text-xl">
+                            <i data-feather="check" class="h-6 w-6 text-primary"></i>
                             <span>Complete 8-week journey</span>
                         </li>
-                        <li class="flex items-center gap-3 text-ink/80">
-                            <i data-feather="check" class="h-5 w-5 text-primary"></i>
+                        <li class="flex items-center gap-3 text-ink/80 text-xl">
+                            <i data-feather="check" class="h-6 w-6 text-primary"></i>
                             <span>Full systems & culture training</span>
                         </li>
-                        <li class="flex items-center gap-3 text-ink/80">
-                            <i data-feather="check" class="h-5 w-5 text-primary"></i>
+                        <li class="flex items-center gap-3 text-ink/80 text-xl">
+                            <i data-feather="check" class="h-6 w-6 text-primary"></i>
                             <span>Save $50 with bundle</span>
                         </li>
-                        <li class="flex items-center gap-3 text-ink/80">
-                            <i data-feather="check" class="h-5 w-5 text-primary"></i>
+                        <li class="flex items-center gap-3 text-ink/80 text-xl">
+                            <i data-feather="check" class="h-6 w-6 text-primary"></i>
                             <span>Money-back guarantee</span>
                         </li>
                     </ul>
@@ -563,7 +574,7 @@
                 </div>
             </div>
 
-            <div class="mt-12 text-center max-w-2xl mx-auto text-ink/70 text-sm reveal">
+            <div class="mt-12 text-center max-w-2xl mx-auto text-ink/70 text-base reveal">
                 <p class="mb-4">
                     <strong>Supporting Registration:</strong> $425 (Prog 1) / $750 (Bundle). <br>
                     Contributes to the Scholarship Fund and diversity commitment.
@@ -584,48 +595,48 @@
             <div class="space-y-6 reveal">
                 <details class="group bg-bg rounded-2xl border border-border overflow-hidden">
                     <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-                        <span class="font-heading font-bold text-lg text-ink">What is the time commitment?</span>
+                        <span class="font-heading font-bold text-xl text-ink">What is the time commitment?</span>
                         <span class="transition group-open:rotate-180">
                             <i data-feather="chevron-down" class="text-primary"></i>
                         </span>
                     </summary>
-                    <div class="px-6 pb-6 text-lg text-ink/80 font-body leading-relaxed">
+                    <div class="px-6 pb-6 text-xl text-ink/80 font-body leading-relaxed">
                         The program is designed to be efficient. Expect under 45 minutes of reading per week, plus two meetings (one triad, one group). Experiential activities are designed to integrate into your daily life.
                     </div>
                 </details>
 
                 <details class="group bg-bg rounded-2xl border border-border overflow-hidden">
                     <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-                        <span class="font-heading font-bold text-lg text-ink">Can I change my mind after registering?</span>
+                        <span class="font-heading font-bold text-xl text-ink">Can I change my mind after registering?</span>
                         <span class="transition group-open:rotate-180">
                             <i data-feather="chevron-down" class="text-primary"></i>
                         </span>
                     </summary>
-                    <div class="px-6 pb-6 text-lg text-ink/80 font-body leading-relaxed">
+                    <div class="px-6 pb-6 text-xl text-ink/80 font-body leading-relaxed">
                         Yes. There is a full money-back guarantee through the first week of each program. If you register for the bundle and drop Program 2, you'll be refunded the difference.
                     </div>
                 </details>
 
                 <details class="group bg-bg rounded-2xl border border-border overflow-hidden">
                     <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-                        <span class="font-heading font-bold text-lg text-ink">Is this open to people outside the network?</span>
+                        <span class="font-heading font-bold text-xl text-ink">Is this open to people outside the network?</span>
                         <span class="transition group-open:rotate-180">
                             <i data-feather="chevron-down" class="text-primary"></i>
                         </span>
                     </summary>
-                    <div class="px-6 pb-6 text-lg text-ink/80 font-body leading-relaxed">
+                    <div class="px-6 pb-6 text-xl text-ink/80 font-body leading-relaxed">
                         Absolutely. We welcome everyone. While initial publicity is within the network, the content is designed for anyone ready to build these capacities.
                     </div>
                 </details>
 
                 <details class="group bg-bg rounded-2xl border border-border overflow-hidden">
                     <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-                        <span class="font-heading font-bold text-lg text-ink">What if I can only take Program 1 now?</span>
+                        <span class="font-heading font-bold text-xl text-ink">What if I can only take Program 1 now?</span>
                         <span class="transition group-open:rotate-180">
                             <i data-feather="chevron-down" class="text-primary"></i>
                         </span>
                     </summary>
-                    <div class="px-6 pb-6 text-lg text-ink/80 font-body leading-relaxed">
+                    <div class="px-6 pb-6 text-xl text-ink/80 font-body leading-relaxed">
                         That's perfectly fine. Program 1 is a complete experience on its own. You can take Program 2 in a future cycle if you wish.
                     </div>
                 </details>
